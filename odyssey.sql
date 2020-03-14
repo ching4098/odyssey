@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2020 at 01:09 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Mar 14, 2020 at 03:52 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -130,7 +130,7 @@ CREATE TABLE `tempahan` (
 
 INSERT INTO `tempahan` (`idTempahan`, `tarikhMasuk`, `tarikhKeluar`, `icPelanggan`, `idBilik`, `bayaran`) VALUES
 (1, '2020-03-18', '2020-03-27', '214748364759', 1, '0.00'),
-(11, '2020-03-19', '2020-03-30', '654475876976', 0, '0.00');
+(11, '2020-03-19', '2020-03-30', '654475876976', 2, '0.00');
 
 --
 -- Indexes for dumped tables
@@ -194,7 +194,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  MODIFY `idTempahan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idTempahan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
