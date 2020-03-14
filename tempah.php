@@ -28,7 +28,7 @@ require('header.php');
                     while ($info2=mysqli_fetch_array($data2))
                     {
                         echo "<option hidden selected> -- pilih bilik -- </option>";
-                        echo "<option value='info2[idBilik]'>$info2[jenisBilik]</option>";
+                        echo "<option value='$info2[idBilik]'>$info2[jenisBilik]</option>";
                     }
                     ?>
                     </select><br>
