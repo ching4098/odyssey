@@ -25,7 +25,7 @@ if (isset($_POST['icPelanggan'])){
         $rekod = "INSERT INTO tempahan
         (idTempahan,tarikhMasuk,tarikhKeluar,icPelanggan,idBilik,bayaran)
         VALUES (NULL,'$tarikhMasuk','$tarikhKeluar','$icPelanggan','$idBilik',
-        '$tunjukDuit[harga]')";
+        '$tunjukDuit[hargaBilik]')";
         //Melaksanakan pertanyaan rekod dengan sambungan ke p.data
         $hasil = mysqli_query($samb,$rekod);
         //papar mesej berjaya atau gagal simpan rekod baharu
