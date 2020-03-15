@@ -30,7 +30,7 @@ require('config.php');
             </tr>
             <?php
                 $no=1;
-                $idBilik=$_POST["bilik"];
+                $idBilik=$_POST["jenisBilik"];
                 $bulan=$_POST["bulan"];
                 $tahun=$_POST["tahun"];
 

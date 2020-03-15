@@ -7,7 +7,7 @@ if(isset($_POST["Import"])) {
         while(($getData = fgetcsv($file, 1000, ",")) !== FALSE) {
             //add in row
             $save = "INSERT INTO pengguna (idPengguna, namaPengguna, kataLaluan, jenisPengguna)
-            values ('".$getData[0]."','".$getData[1]."','".$getData[2]."','".$getData[3]."')";
+            values (NULL,'".$getData[1]."','".$getData[2]."','".$getData[3]."')";
             
             $result = mysqli_query($samb,$save);
             if(isset($result)) {

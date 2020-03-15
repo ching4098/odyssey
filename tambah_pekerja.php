@@ -17,8 +17,13 @@ if(isset($_POST['namaPengguna'])) {
             <form name="form1" action="tambah_pekerja.php" method="POST">
                 <fieldset>
                     <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" /><br><br>
-                    <label>Kata Laluan:</label><input type="text" name="kataLaluan" id="kataLaluan" /><br><br>
-                    <label>Jenis Pengguna:</label><input type="text" name="jenisPengguna" id="jenisPengguna" /><br><br>
+                    <label>Kata Laluan:</label><input type="password" name="kataLaluan" id="kataLaluan" /><br><br>
+                    <label for="jenisPengguna">Jenis Pengguna:</label>
+                    <select id="jenisPengguna" name="jenisPengguna">
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="PEKERJA">PEKERJA</option>
+                    </select>
+                    <br><br>
                     <input type="submit" name="update" id="submit" value="Tambah Pengguna" />
                 </fieldset>
             </form>

@@ -10,7 +10,7 @@ require('header.php');
                 <form name="form1" method="POST" action="laporan2.php">
                     <table width="600" border="1">
                         <tr>
-                            <td width="118">Nama Bilik</td>
+                            <td width="118">Jenis Bilik</td>
                             <td width="31">:</td>
                             <td width="429"><label for="select"></label><select name="jenisBilik">
                                 <?php
@@ -65,5 +65,6 @@ require('header.php');
                 </center>
             </table>
         </center>
+        <script type="text/javascript" src="js/nevernull.js"></script>
     </body>
 </html>
