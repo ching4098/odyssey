@@ -81,5 +81,4 @@ if (isset($_POST['namaPengguna'])){
     </body>
     <script type="text/javascript" src="../js/main.js"></script>
     </fieldset>
-    <?php require('../components/footer.php'); ?>
 </html>
