@@ -30,8 +30,7 @@ require('header.php');
                         <td><?php echo $info1['kataLaluan']; ?></td>
                         <td><?php echo $info1['jenisPengguna']; ?></td>
                         <td>
-                            <a href="kemaskini_pekerja.php?namaPengguna=
-                            <?php echo $info1['namaPengguna']; ?>">Kemaskini</a> |
+                            <a href="kemaskini_pekerja.php?namaPengguna=<?php echo $info1['namaPengguna']; ?>">Kemaskini</a> |
                             <?php
                             //admin can delete akaun pekerja but pekerja can't delete admin akaun
                             if ($info1['jenisPengguna']!="ADMIN") {
