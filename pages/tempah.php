@@ -1,16 +1,16 @@
 <?php
 //sambung ke pangkalan data
-require('config.php');
+require('../functions/config.php');
 //sambung ke fail template
-require('header.php');
+require('../components/header.php');
 ?>
 <html>
     <head>
         <title>Masuk Tempahan</title>
     </head>
     <body><FIELDSET>
-        Jika pelanggan baharu <a href="daftar_pelanggan.php">Daftar di sini</a>
-        <br><hr><form method="POST" action="masuk_tempahan.php">
+        Jika pelanggan baharu <a href="../functions/daftar_pelanggan.php">Daftar di sini</a>
+        <br><hr><form method="POST" action="../functions/masuk_tempahan.php">
             <!-- BORANG CARIAN NAMA PELANGGAN MULA -->
             <label>IC Pelanggan: </label><select name="icPelanggan">
                     <?php
@@ -38,6 +38,6 @@ require('header.php');
                     <button type="reset">Reset</button><br><br>
                     *Pilihan hanya dibenarkan sekali sahaja.
                 </form>
-                <a href="dashboardAdmin.php">Dashboard</a>
+                <a href="../pages/dashboardAdmin.php">Dashboard</a>
                 </FIELDSET></body>
                 </html>

@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 if(isset($_POST['update'])) {
     $idPengguna = $_POST['idPengguna'];
     $namaPengguna = $_POST['namaPengguna'];
@@ -10,7 +10,7 @@ if(isset($_POST['update'])) {
     $result = mysqli_query($samb, "UPDATE pengguna SET namaPengguna='$namaPengguna',kataLaluan='$kataLaluan',jenisPengguna='$jenisPengguna' WHERE idPengguna='$idPengguna'");
     //show message if success
     echo "<script>alert('Kemaskini Rekod Pekerja telah berjaya');
-    window.location='pekerja.php'</script>";
+    window.location='../pages/pekerja.php'</script>";
 }
 ?>
 <?php
@@ -30,7 +30,7 @@ while($res = mysqli_fetch_array($result)) {
     <center>
         <body>
             <h3>KEMASKINI REKOD PEKERJA</h3>
-            <form name="form1" action="kemaskini_pekerja.php" method="POST">
+            <form name="form1" action="../functions/kemaskini_pekerja.php" method="POST">
                 <fieldset>
                     <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" placeholder="<?php echo $username;?>" /><br><br>
                     <label>Kata Laluan:</label><input type="pass" name="kataLaluan" id="kataLaluan" placeholder="<?php echo $pass;?>" /><br><br>
@@ -44,7 +44,7 @@ while($res = mysqli_fetch_array($result)) {
                     <input type="submit" name="update" id="submit" value="Kemaskini" />
                 </fieldset>
             </form>
-            <a href="pekerja.php">Ke Senarai Pekerja</a>
+            <a href="../pages/pekerja.php">Ke Senarai Pekerja</a>
         </body>
     </center>
 </html>

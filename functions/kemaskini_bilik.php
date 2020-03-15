@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 if(isset($_POST['update'])){
     $idBilik = $_POST['idBilik'];
     $jenisBilik = $_POST['jenisBilik'];
@@ -10,7 +10,7 @@ if(isset($_POST['update'])){
     "UPDATE bilik SET namaPelanggan='$namaPelanggan',harga='$hargaBilik' WHERE idBilik=$idBilik");
     echo"<script
     alert('Kemaskini rekod telah berjaya');
-    window.location='bilik.php'</script>";
+    window.location='../pages/bilik.php'</script>";
 }
 ?>
 <?php
@@ -27,17 +27,17 @@ while($res = mysqli_fetch_array($result)){
     <center>
         <body>
             <h3>KEMASKINI BILIK</h3>
-            <form name="form1" action="kemaskini_bilik.php" method="POST">
+            <form name="form1" action="../functions/kemaskini_bilik.php" method="POST">
                 <fieldset>
                     <label>Nama Bilik:</label>
-                    <input type="text" name="jenisBilik" id="jenisBilik" value="<?php echo $jenisBilik;?>" /><br><br>
+                    <input type="text" name="jenisBilik" id="jenisBilik" placeholder="<?php echo $jenisBilik;?>" /><br><br>
                     <label>Harga:</label>
-                    <input type="text" name="hargaBilik" id="hargaBilik" value="<?php echo $hargaBilik;?>" />
+                    <input type="text" name="hargaBilik" id="hargaBilik" placeholder="<?php echo $hargaBilik;?>" />
                     <input type="hidden" name="idBilik" value="<?php echo $_GET['idBilik'];?>" /><br><br>
                     <input type="submit" name="update" id="submit" value="Kemaskini" />
                 </fieldset>
             </form>
-            <a href="bilik.php">Ke Senarai Bilik</a>
+            <a href="../pages/bilik.php">Ke Senarai Bilik</a>
         </body>
     </center>
 </html>

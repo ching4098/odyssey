@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('../functions/config.php');
 if (isset($_POST['icPelanggan'])){
     $icPelanggan = $_POST['icPelanggan'];
     $tarikhMasuk = $_POST['tarikhMasuk'];
@@ -30,11 +30,11 @@ if (isset($_POST['icPelanggan'])){
         $hasil = mysqli_query($samb,$rekod);
         //papar mesej berjaya atau gagal simpan rekod baharu
         echo "<script>alert('Tempahan Bilik Berjaya');
-        window.location='semak.php'</script>";
+        window.location='../pages/semak.php'</script>";
     }
     else{
         echo "<script>alert('Tempahan Bilik Gagal! Bilik telah ditempah');
-        window.location='tempah.php'</script>";
+        window.location='../pages/tempah.php'</script>";
         }
 }
 ?>

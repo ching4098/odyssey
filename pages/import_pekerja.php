@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 ?>
 <html>
     <center>
@@ -13,7 +13,7 @@ require('header.php');
             <input type="file" name="file" id="file" class="input-large"><br>
             <button type="submit" id="submit" name="import">Upload</button><br>
             </form><br>
-            <a href="dashboardAdmin.php">Laman Utama</a>
+            <a href="../pages/dashboardAdmin.php">Laman Utama</a>
             </fieldset>
         </body>
     </center>

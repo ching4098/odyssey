@@ -3,16 +3,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Dashboard</title>
-	<link rel="stylesheet" href="dashboardAdmin.css">
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+	<title>Menu Utama</title>
 </head>
 <body>
 
 <div class="wrapper">
     <div class="sidebar">
-        <h2 class="title">dashboard</h2>
+        <h2 class="title">Menu Utama</h2>
         <ul>
         <!-- <li><a href="tempah.php"><i class="fas fa-home"></i>Masuk Tempahan</a></li> -->
         <li><a href="tempah.php"><i class="fas fa-home"></i>Masuk Tempahan</a></li>
@@ -24,15 +21,14 @@
         </ul> 
     </div>
     <div class="main_content">
-            <img src="img/homestay.png" alt="logo" class="logo">
-        <pre class="header">               Sistem Pengurusan Homestay Ray</pre> 
+        <pre class="header">               Sistem Pengurusan Homestay Odyssey</pre> 
     </div>
-    <a href="keluar.php" class="logout">
+    <a href="../functions/keluar.php" class="logout">
           <span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
 
         <div class="footer">
-						Sistem Pengurusan Homestay Odyssey
+						
 					</div>
 </div>
 

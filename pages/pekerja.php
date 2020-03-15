@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 ?>
 <html>
     <center>
@@ -9,7 +9,7 @@ require('header.php');
             <table width ="811" border="1" align="center">
                 <tr>
                     <td colspan="5" valign="middle" align="center"><b>
-                        <a href="tambah_pekerja.php">[+] Tambah Pekerja
+                        <a href="../functions/tambah_pekerja.php">[+] Tambah Pekerja
                         </a></b></td>
                 </tr>
                 <tr>
@@ -30,12 +30,12 @@ require('header.php');
                         <td><?php echo $info1['kataLaluan']; ?></td>
                         <td><?php echo $info1['jenisPengguna']; ?></td>
                         <td>
-                            <a href="kemaskini_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Kemaskini</a> |
+                            <a href="../functions/kemaskini_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Kemaskini</a> |
                             <?php
                             //admin can delete akaun pekerja but pekerja can't delete admin akaun
                             if ($info1['jenisPengguna']!="ADMIN") {
                             ?>
-                            <a href="hapus_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Hapus</a>
+                            <a href="../functions/hapus_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Hapus</a>
                             <?php
                             }
                             ?>
@@ -44,6 +44,6 @@ require('header.php');
                 <?php $no++; } ?>
             </table>
         </fieldset>
-        <a href="dashboardAdmin.php">Ke Menu Utama</a>
+        <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a>
     </center>
 </html>

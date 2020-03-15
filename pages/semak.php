@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('../functions/config.php');
 
 ?>
 <html>
@@ -79,7 +79,7 @@ while ($info1=mysqli_fetch_array($data1))
             if ($jumHari2>3)
             {
                 ?>
-                <a href="hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
+                <a href="../functions/hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
                 Batal Tempahan</a>
                 <?php
             }
@@ -101,7 +101,7 @@ while ($info1=mysqli_fetch_array($data1))
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam
                 tempoh 3 hari SEBELUM tarikh masuk.</font>
                 <br><br>
-                <a href="dashboardAdmin.php">Ke Menu Utama</a><br>
+                <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a><br>
                 <a href="javascript:window.print()">Cetak Laporan</a>
         </center>
         </body>

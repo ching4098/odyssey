@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('../functions/config.php');
 ?>
 <html>
     <head>
@@ -98,7 +98,7 @@ require('config.php');
         Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center>
             <br><br>
-            <a href="dashboardAdmin.php">Ke Menu Utama</a>
+            <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a>
             <a href="javascript:window.print()">Cetak Laporan</a>
         </center>
         </table>

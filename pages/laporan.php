@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 ?>
 <html>
     <body>
@@ -61,10 +61,9 @@ require('header.php');
                 <p>&nbsp;</p>
                 <hr /><div align="center" class="style15"></div>
                 <center> <br><br>
-                    <a href="dashboardAdmin.php">Ke Menu Utama</a>
+                    <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a>
                 </center>
             </table>
         </center>
-        <script type="text/javascript" src="js/nevernull.js"></script>
     </body>
 </html>

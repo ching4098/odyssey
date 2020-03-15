@@ -1,5 +1,5 @@
 <?php
-require('config.php');
+require('../functions/config.php');
 if(isset($_POST["Import"])) {
     $filename=$_FILES["file"]["tmp_name"];
     if($_FILES["file"]["size"] > 0){
@@ -11,7 +11,7 @@ if(isset($_POST["Import"])) {
             
             $result = mysqli_query($samb,$save);
             if(isset($result)) {
-                echo "<script type=\"text/javascript\">alert(\"Pindah naik fail CSV gagal\"); window.location = \"import_pekerja.php\"</script>";
+                echo "<script type=\"text/javascript\">alert(\"Pindah naik fail CSV gagal\"); window.location = \"../pages/import_pekerja.php\"</script>";
             }
         }fclose($file);
     }

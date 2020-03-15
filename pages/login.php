@@ -1,8 +1,8 @@
 <?php
 //connect to database
-require('config.php');
+require('../functions/config.php');
 //continue to header file
-require('header.php');
+require('../components/header.php');
 session_start();
 //check data sending progress
 if (isset($_POST['namaPengguna'])){
@@ -19,14 +19,14 @@ if (isset($_POST['namaPengguna'])){
     {
         //login error
         echo "<script>alert('ID Pengguna atau Kata Laluan anda adalah yang salah');
-        window.location='index.php'</script>";
+        window.location='../pages/login.php'</script>";
     }
     else{
         $_SESSION['namaPengguna']=$row['namaPengguna'];
         $_SESSION['level']=$row['jenisPengguna'];
 
         //open designated index.php
-        header("Location: dashboardAdmin.php");
+        header("Location: ../pages/dashboardAdmin.php");
     }
 }
 ?>
@@ -37,20 +37,20 @@ if (isset($_POST['namaPengguna'])){
         <title>
             Odyssey
         </title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     </head>
     <body>
     <fieldset>
-        <img class="wave" src="img/wave.png">
+        <img class="wave" src="../img/wave.png">
         <div class="container">
             <div class="img">
-                <img src="img/planet-cosmos-orbit-universe-geo-sattelite-1-51515.png">
+                <img src="../img/planet-cosmos-orbit-universe-geo-sattelite-1-51515.png">
             </div>
             <div class="login-content">
                 <form method="POST">
-                    <img src="img/db_image.svg">
+                    <img src="../img/db_image.svg">
                     <h2 class="title">Sistem Pengurusan Homestay Odyssey</h2>
                        <div class="input-div one">
                           <div class="i">
@@ -79,7 +79,7 @@ if (isset($_POST['namaPengguna'])){
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
     </fieldset>
-    <?php require('footer.php'); ?>
+    <?php require('../components/footer.php'); ?>
 </html>

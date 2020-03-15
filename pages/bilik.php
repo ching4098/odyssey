@@ -1,6 +1,6 @@
 <?php
-require('config.php');
-require('header.php');
+require('../functions/config.php');
+require('../components/header.php');
 ?>
 <html>
     <head>
@@ -12,7 +12,7 @@ require('header.php');
             <table width="811" border="1" align="center">
                 <tr>
                     <td colspan="4" valign="middle" align="right"><b>
-                        <a href="tambah_bilik.php">[+] Tambah Bilik</a></b></td>
+                        <a href="../functions/tambah_bilik.php">[+] Tambah Bilik</a></b></td>
 </tr>
 <tr>
     <td width="40"><b>Bil.</b></td>
@@ -30,16 +30,16 @@ while ($info1=mysqli_fetch_array($data1))
         <td><?php echo $no; ?></td>
         <td><?php echo $info1['jenisBilik']; ?></td>
         <td>RM <?php echo $info1['hargaBilik']; ?></td>
-        <td><a href="kemaskini_bilik.php?idBilik=
+        <td><a href="../functions/kemaskini_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Kemaskini</a> |
-        <a href="hapus_bilik.php?idBilik=
+        <a href="../functions/hapus_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Hapus</a>
 </td>
 </tr>
 <?php $no++; } ?>
 </table>
 </fieldset>
-<a href="dashboardAdmin.php">Ke Menu Utama</a><br>
+<a href="../pages/dashboardAdmin.php">Ke Menu Utama</a><br>
 </center>
 </body>
 </html>
