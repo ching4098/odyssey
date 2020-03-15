@@ -15,9 +15,9 @@ if(isset($_POST['update'])) {
 ?>
 <?php
 //Dapatkan id dari url
-$id = $_GET['namaPengguna'];
+$id = $_GET['idPengguna'];
 //Pilih data berdasarkan id rekod
-$result = mysqli_query($samb, "SELECT * FROM pengguna WHERE namaPengguna='$id'");
+$result = mysqli_query($samb, "SELECT * FROM pengguna WHERE idPengguna='$id'");
 while($res = mysqli_fetch_array($result)) {
     //Show original data
     $uid =$res['idPengguna'];
@@ -29,14 +29,14 @@ while($res = mysqli_fetch_array($result)) {
 <html>
     <center>
         <body>
-            <?php echo $uid;?>
             <h3>KEMASKINI REKOD PEKERJA</h3>
             <form name="form1" action="kemaskini_pekerja.php" method="POST">
                 <fieldset>
                     <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" placeholder="<?php echo $username;?>" /><br><br>
-                    <label>Kata Laluan:</label><input type="pass" name="kataLaluan" id="kataLaluan" placeholder="<?php echo $pass;?>" />
+                    <label>Kata Laluan:</label><input type="pass" name="kataLaluan" id="kataLaluan" placeholder="<?php echo $pass;?>" /><br><br>
                     <label>Jenis Pengguna:</label>
-                    <select id="jenisPengguna" name="jenisPengguna" id="jenisPengguna" aria-placeholder="<?php echo $status; ?>">
+                    <select id="jenisPengguna" name="jenisPengguna" id="jenisPengguna" >
+                        <option aria-placeholder="<?php echo $status; ?>">Sila Memilih Opsyen Anda</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
                     </select>

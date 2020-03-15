@@ -30,12 +30,12 @@ require('header.php');
                         <td><?php echo $info1['kataLaluan']; ?></td>
                         <td><?php echo $info1['jenisPengguna']; ?></td>
                         <td>
-                            <a href="kemaskini_pekerja.php?namaPengguna=<?php echo $info1['namaPengguna']; ?>">Kemaskini</a> |
+                            <a href="kemaskini_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Kemaskini</a> |
                             <?php
                             //admin can delete akaun pekerja but pekerja can't delete admin akaun
                             if ($info1['jenisPengguna']!="ADMIN") {
                             ?>
-                            <a href="hapus_pekerja.php?namaPengguna=<?php echo $info1['namaPengguna']; ?>">Hapus</a>
+                            <a href="hapus_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Hapus</a>
                             <?php
                             }
                             ?>
