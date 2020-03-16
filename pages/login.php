@@ -22,7 +22,7 @@ if (isset($_POST['namaPengguna'])){
         window.location='../pages/login.php'</script>";
     }
     else{
-        $_SESSION['namaPengguna']=$row['namaPengguna'];
+        $_SESSION['idPengguna']=$row['idPengguna'];
         $_SESSION['level']=$row['jenisPengguna'];
 
         //open designated index.php
@@ -59,7 +59,7 @@ if (isset($_POST['namaPengguna'])){
                             </i>
                           </div>
                           <div class="div">
-                                  <h5>ID Pengguna</h5>
+                                  <h5>Nama Pengguna</h5>
                                   <input type="text" class="input" name="namaPengguna"  required>
                           </div>
                        </div>
