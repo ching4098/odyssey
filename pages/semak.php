@@ -1,31 +1,32 @@
 <?php
+session_start();
 require('../functions/config.php');
-
+require ("../functions/keselamatan.php");
 ?>
 <html>
     <head>
         <title>Semak Tempahan</title>
+        <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
-    <body><center>
-        <table width="911" border="0">
-            <td><p><strong>SENARAI TEMPAHAN BILIK</strong></p>
-            <table width="1000" border="1" align="center">
-                <tr>
-                    <td colspan="10">
-                        REKOD TEMPAHAN <?php echo $namarumah; ?><br>
-</td>
-</tr>
+    <body>
+        
+    <?php include("../components/menu.php"); ?>    
+    <main>
+    <h3>Rekod Tempahan <?php echo $namarumah ?></h3>
+    <center>
+        
+    <table class="highlight" width="1000" border="1" align="center">
 <tr>
-    <td width="30"><b>Bil.</b></td>
-    <td width="150"><b>Jenis Bilik</b></td>
-    <td width="120"><b>Tarikh Masuk</b></td>
-    <td width="120"><b>Tarikh Keluar</b></td>
-    <td width="100"><b>Bil Hari</b></td>
-    <td width="200"><b>Nama Pelanggan</b></td>
-    <td width="100"><b>Nombor HP</b></td>
-    <td width="180"><b>Harga</b></td>
-    <td width="180"><b>Jumlah Harga</b></td>
-    <td width="140"><b>Tindakan</b></td>
+    <td width="2.5%"><b>Bil.</b></td>
+    <td width="7%"><b>Jenis Bilik</b></td>
+    <td width="7%"><b>Tarikh Masuk</b></td>
+    <td width="7%"><b>Tarikh Keluar</b></td>
+    <td width="5%"><b>Bil Hari</b></td>
+    <td width="15%"><b>Nama Pelanggan</b></td>
+    <td width="10%"><b>Nombor HP</b></td>
+    <td width="10%"><b>Harga</b></td>
+    <td width="10%"><b>Jumlah Harga</b></td>
+    <td width="10%"><b>Tindakan</b></td>
 </tr>
 <?php
 $no=1;
@@ -79,7 +80,7 @@ while ($info1=mysqli_fetch_array($data1))
             if ($jumHari2>3)
             {
                 ?>
-                <a href="../functions/hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
+                <a class="waves-effect waves-light btn-small purple" href="../functions/hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
                 Batal Tempahan</a>
                 <?php
             }
@@ -89,20 +90,19 @@ while ($info1=mysqli_fetch_array($data1))
             <?php $no++; } ?>
             <tr>
                 <td colspan="8" align="right">
-                    JUMLAH KESELURUHAN
+                    Jumlah Keseluruhan
         </td>
         <td>RM <?php echo number_format($jumBesar,2);?></td>
         <td></td>
         </tr>
         </table>
-        <hr /><div align="center" class="style15">* Laporan Tamat *<br/>Jumlah
-        Rekod:<?php echo $no-1; ?></div>
+        <hr /><div align="center" class="style15">* Laporan Tamat *<br><br>Jumlah
+        Rekod:<?php echo $no-1; ?></div><br>
         <center>
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam
                 tempoh 3 hari SEBELUM tarikh masuk.</font>
                 <br><br>
-                <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a><br>
-                <a href="javascript:window.print()">Cetak Laporan</a>
+                <a class="waves-effect waves-light btn-small purple" href="javascript:window.print()">Cetak Laporan</a>
         </center>
-        </body>
+        </main></body>
         </html>

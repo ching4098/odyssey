@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 require('../components/header.php');
 if(isset($_POST['update'])) {
@@ -27,24 +29,42 @@ while($res = mysqli_fetch_array($result)) {
 }
 ?>
 <html>
+<?php include("../components/menu.php"); ?>
+<head>
+    <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
     <center>
+        
+        <main>
         <body>
-            <h3>KEMASKINI REKOD PEKERJA</h3>
+            <h3>Kemaskini Rekod Pekerja</h3>
             <form name="form1" action="../functions/kemaskini_pekerja.php" method="POST">
-                <fieldset>
-                    <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" placeholder="<?php echo $username;?>" /><br><br>
-                    <label>Kata Laluan:</label><input type="pass" name="kataLaluan" id="kataLaluan" placeholder="<?php echo $pass;?>" /><br><br>
-                    <label>Jenis Pengguna:</label>
-                    <select id="jenisPengguna" name="jenisPengguna" id="jenisPengguna" >
-                        <option aria-placeholder="<?php echo $status; ?>">Sila Memilih Opsyen Anda</option>
+                <fieldset style="padding-left:20%;padding-right:20%" >
+                    <br><div class="row">
+                    <div class="input-field col s12">
+                        <input id="namaPengguna" type="text" name="namaPengguna" placeholder="<?php echo $username;?>">
+                        <label for="text">Nama Pengguna</label>
+                    </div><br><br>
+                    <br><div class="row">
+                    <div class="input-field col s12">
+                        <input id="kataLaluan" type="password" name="kataLaluan" placeholder="<?php echo $pass;?>">
+                        <label for="password">Kata Laluan</label>
+                    </div>
+                    </div>
+                    Jenis Pengguna:
+                    <br><br><br><select class=browser-default name="jenisPengguna" id="jenisPengguna" >
+                        <option>Sila Memilih Opsyen Anda</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
                     </select>
+                    </div>
                     <input type="hidden" name="idPengguna" value=<?php echo $uid;?> ><br><br>
-                    <input type="submit" name="update" id="submit" value="Kemaskini" />
+                    <button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
+                    <br>
+                    <br>
+                    <br>
                 </fieldset>
             </form>
-            <a href="../pages/pekerja.php">Ke Senarai Pekerja</a>
         </body>
-    </center>
+    </main></center>
 </html>

@@ -1,20 +1,40 @@
 <?php
+session_start();
+require ('../functions/keselamatan.php');
 require('../functions/config.php');
 require('../components/header.php');
 ?>
 <html>
+    <head>
+    <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <body>
+        <?php include("../components/menu.php"); ?>
+    </body>
+    <main>
     <center>
-        <h2>DAFTAR LOGIN PEKERJA<br>
-        IMPORT FAIL .CSV</h2>
+        <h3>Import Akaun Pekerja</h3>
         <body>
             <fieldset>
             <label>Pilih lokasi fail CSV/Excel:</label><br>
-            <form action="import_proses.php" method="POST" name="upload_excel" enctype="multipart/form-data"><br>
-            <input type="file" name="file" id="file" class="input-large"><br>
-            <button type="submit" id="submit" name="import">Upload</button><br>
+            <form action="../functions/import_proses.php" method="POST" name="upload_excel" enctype="multipart/form-data"><br>
+                <div class="file-field input-field">
+                    <div class="btn purple">
+                        <span>File</span>
+                        <input type="file" name="file" id="file" class="input-large">
+                    </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn-small purple" type="submit" id="submit" name="Import">Upload</button><br>
             </form><br>
-            <a href="../pages/dashboardAdmin.php">Laman Utama</a>
             </fieldset>
         </body>
-    </center>
+        <script>
+            function getInputFile() {
+                document.getElementById("file").click();
+            };
+        </script>
+    </center></main>
 </html>

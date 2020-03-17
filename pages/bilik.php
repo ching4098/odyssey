@@ -1,24 +1,31 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 require('../components/header.php');
 ?>
 <html>
     <head>
         <title>Setup Bilik</title>
+        <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
-    <center>
-        <h3>SENARAI BILIK</h3><br>
-        <fieldset>
-            <table width="811" border="1" align="center">
+    <?php include("../components/menu.php"); ?>
+    <body>
+        
+    <main>
+        <center>
+        <h3>Senarai Bilik</h3><br>
+        <fieldset >
+            <table class="highlight" >
                 <tr>
-                    <td colspan="4" valign="middle" align="right"><b>
-                        <a href="../functions/tambah_bilik.php">[+] Tambah Bilik</a></b></td>
+                    <td colspan="4"  valign="middle" align="middle">
+                        <a class="waves-effect waves-light btn-small purple" href="../functions/tambah_bilik.php">[+] Tambah Bilik</a></td>
 </tr>
 <tr>
-    <td width="40"><b>Bil.</b></td>
-    <td width="243"><b>Jenis Bilik</b></td>
-    <td width="150"><b>Harga Semalam</b></td>
-    <td width="150"><b>Tindakan</b></td>
+    <td width="10%"><b>Bil.</b></td>
+    <td width="20%"><b>Jenis Bilik</b></td>
+    <td width="25%"><b>Harga Semalam</b></td>
+    <td width="10%"><b>Tindakan</b></td>
 </tr> 
 <?php
 $data1=mysqli_query($samb,"SELECT * FROM bilik ORDER BY hargaBilik");
@@ -30,16 +37,16 @@ while ($info1=mysqli_fetch_array($data1))
         <td><?php echo $no; ?></td>
         <td><?php echo $info1['jenisBilik']; ?></td>
         <td>RM <?php echo $info1['hargaBilik']; ?></td>
-        <td><a href="../functions/kemaskini_bilik.php?idBilik=
+        <td><a class="waves-effect waves-light btn-small purple" href="../functions/kemaskini_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Kemaskini</a> |
-        <a href="../functions/hapus_bilik.php?idBilik=
+        <a class="waves-effect waves-light btn-small purple" href="../functions/hapus_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Hapus</a>
 </td>
 </tr>
 <?php $no++; } ?>
 </table>
 </fieldset>
-<a href="../pages/dashboardAdmin.php">Ke Menu Utama</a><br>
 </center>
+</main>
 </body>
 </html>

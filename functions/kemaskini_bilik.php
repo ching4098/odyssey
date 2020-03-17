@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 require('../components/header.php');
 if(isset($_POST['update'])){
@@ -24,20 +26,31 @@ while($res = mysqli_fetch_array($result)){
 }
 ?>
 <html>
+<?php include("../components/menu.php"); ?>
+<head>
+    <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
     <center>
+        
         <body>
-            <h3>KEMASKINI BILIK</h3>
+            <main>
+            <h3>Kemaskini Bilik</h3>
             <form name="form1" action="../functions/kemaskini_bilik.php" method="POST">
-                <fieldset>
-                    <label>Nama Bilik:</label>
-                    <input type="text" name="jenisBilik" id="jenisBilik" placeholder="<?php echo $jenisBilik;?>" /><br><br>
-                    <label>Harga:</label>
-                    <input type="text" name="hargaBilik" id="hargaBilik" placeholder="<?php echo $hargaBilik;?>" />
+                <fieldset style="padding-left:20%;padding-right:20%">
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input id="jenisBilik" type="text" name="jenisBilik" placeholder="<?php echo $jenisBilik;?>">
+                        <label for="text">Jenis Bilik</label>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input id="hargaBilik" type="text" name="hargaBilik" placeholder="<?php echo $hargaBilik;?>">
+                        <label for="text">Jenis Bilik</label>
+                    </div>
                     <input type="hidden" name="idBilik" value="<?php echo $_GET['idBilik'];?>" /><br><br>
-                    <input type="submit" name="update" id="submit" value="Kemaskini" />
+                    <button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
                 </fieldset>
             </form>
-            <a href="../pages/bilik.php">Ke Senarai Bilik</a>
-        </body>
+        </main></body>
     </center>
 </html>

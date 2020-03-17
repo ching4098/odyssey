@@ -5,7 +5,7 @@ $samb = mysqli_connect("localhost","root","","odyssey");
 if (mysqli_connect_errno()){
     echo "Gagal sambungkan pangkalan data mysql: ".mysqli_connect_error();
 }
-$namasistem="ODYSSEY MANAGEMENT";
-$namarumah="ODYSSEY HOMESTAY";
+$namasistem="Odyssey Management";
+$namarumah="Odyssey Homestay";
 $moto="Servis yang Terpuji";
 ?>

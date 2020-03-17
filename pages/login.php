@@ -26,7 +26,7 @@ if (isset($_POST['namaPengguna'])){
         $_SESSION['level']=$row['jenisPengguna'];
 
         //open designated index.php
-        header("Location: ../pages/dashboardAdmin.php");
+        header("Location: ../pages/tempah.php");
     }
 }
 ?>
@@ -37,20 +37,20 @@ if (isset($_POST['namaPengguna'])){
         <title>
             Odyssey
         </title>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     </head>
     <body>
     <fieldset>
-        <img class="wave" src="../img/wave.png">
+        <img class="wave" src="../assets/img/wave.png">
         <div class="container">
             <div class="img">
-                <img src="../img/planet-cosmos-orbit-universe-geo-sattelite-1-51515.png">
+                <img src="../assets/img/planet-cosmos-orbit-universe-geo-sattelite-1-51515.png">
             </div>
             <div class="login-content">
                 <form method="POST">
-                    <img src="../img/db_image.svg">
+                    <img src="../assets/img/db_image.svg">
                     <h2 class="title">Sistem Pengurusan Homestay Odyssey</h2>
                        <div class="input-div one">
                           <div class="i">

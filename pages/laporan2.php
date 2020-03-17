@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 ?>
 <html>
@@ -6,27 +8,30 @@ require('../functions/config.php');
         <title>
             LAPORAN BULANAN BILIK
         </title>
+        <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
+    <?php include("../components/menu.php"); ?>
+        <main>
         <table width="711" border="0">
-            <td><p><strong>LAPORAN BULANAN KEUNTUNGAN BILIK</strong></p></td>
-        <table width="1000" border="1" align="center">
+            <h3>Laporan Bulanan Keuntungan Bilik</h3>
+        <table class="highlight" width="1000" border="1" align="center">
             <tr>
                 <td colspan="9">
-                    REKOD TEMPAHANA BULANAN: <?php echo $namarumah; ?><br>
+                    Rekod Tempahan Bulanan : <?php echo $namarumah; ?>
                     <div align="right" class="style15">Tarikh Cetakan:<?php echo date("d/m/Y"); ?></div>
                 </td>
             </tr>
             <tr>
-                <td width="30"><b>Bil.</b></td>
-                <td width="150"><b>Jenis Bilik</b></td>
-                <td width="140"><b>Tarikh Masuk</b></td>
-                <td width="140"><b>Tarikh Keluar</b></td>
-                <td width="100"><b>Bil. Hari</b></td>
-                <td width="100"><b>Nama Pelanggan</b></td>
-                <td width="100"><b>Nombor HP</b></td>
-                <td width="140"><b>Harga</b></td>
-                <td width="140"><b>Jumlah</b></td>
+                <td width="2.5%"><b>Bil.</b></td>
+                <td width="7%"><b>Jenis Bilik</b></td>
+                <td width="7%"><b>Tarikh Masuk</b></td>
+                <td width="7%"><b>Tarikh Keluar</b></td>
+                <td width="5%"><b>Bil. Hari</b></td>
+                <td width="15%"><b>Nama Pelanggan</b></td>
+                <td width="10%"><b>Nombor HP</b></td>
+                <td width="10%"><b>Harga</b></td>
+                <td width="10%"><b>Jumlah</b></td>
             </tr>
             <?php
                 $no=1;
@@ -89,18 +94,17 @@ require('../functions/config.php');
             <?php $no++; } ?>
             <tr>
                 <td colspan="8" align="right">
-                    JUMLAH KESELURUHAN
+                    Jumlah Keseluruhan
                 </td>
                 <td>RM <?php echo number_format($jumBesar,2); ?></td>
             </tr>
         </table>
-        <hr /><div align="center" class="style15">*LAPORAN TAMAT*<br />
+        <br><div align="center" class="style15">*LAPORAN TAMAT*<br><br>
         Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center>
-            <br><br>
-            <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a>
-            <a href="javascript:window.print()">Cetak Laporan</a>
+            <br>
+            <a class="waves-effect waves-light btn-small purple" href="javascript:window.print()">Cetak Laporan</a>
         </center>
         </table>
-    </body>
+    </main></body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 //Dapatkan id dari URl
 $target = $_GET['idPengguna'];

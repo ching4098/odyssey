@@ -1,18 +1,27 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 require('../components/header.php');
 ?>
+
 <html>
+    <head>
+        <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    </head>
+    <?php include("../components/menu.php"); ?>
     <body>
+        
+        <main>
         <center>
-            <table width="711" border="0">
-                <td><p><strong>CETAK REKOD TRANSAKSI</strong></p></td>
-                <form name="form1" method="POST" action="laporan2.php">
-                    <table width="600" border="1">
+            <table>
+                <h3>Laporan Homestay Odyssey</h3>
+                <form  name="form1" method="POST" action="laporan2.php">
+                    <table style="padding-left:20%;padding-right:20%" border="1">
                         <tr>
                             <td width="118">Jenis Bilik</td>
                             <td width="31">:</td>
-                            <td width="429"><label for="select"></label><select name="jenisBilik">
+                            <td width="429"><label for="select"></label><select class=browser-default name="jenisBilik">
                                 <?php
                                 //call idBilik from db
                                 $data2=mysqli_query($samb, "SELECT * FROM bilik");
@@ -26,7 +35,7 @@ require('../components/header.php');
                         <tr>
                             <td>Bulan</td>
                             <td>:</td>
-                            <td><select name="bulan" id="bulan">
+                            <td><select class=browser-default name="bulan" id="bulan">
                                 <option value="-">-</option>
                                 <option value="1">Jan</option>
                                 <option value="2">Feb</option>
@@ -45,25 +54,20 @@ require('../components/header.php');
                         <tr>
                             <td>Tahun</td>
                             <td>:</td>
-                            <td><select name="tahun" id="tahun">
+                            <td><select class=browser-default name="tahun" id="tahun">
                                 <option value="-">-</option>
                                 <option>2019</option>
                                 <option>2020</option>
                             </select></td>
                         </tr>
                         <tr>
-                            <td colspan="3">
-                                <input type="submit" name="button" id="button" value="Cetak">
+                            <td colspan="3" style="text-align:center">
+                                <button class="waves-effect waves-light btn-small purple" type="submit" name="button" id="button" value="Cetak">Cetak</button>
                             </td>
                         </tr>
                     </table>
                 </form>
-                <p>&nbsp;</p>
-                <hr /><div align="center" class="style15"></div>
-                <center> <br><br>
-                    <a href="../pages/dashboardAdmin.php">Ke Menu Utama</a>
-                </center>
             </table>
         </center>
-    </body>
+    </main></body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 if (isset($_POST['icPelanggan'])){
     $icPelanggan = $_POST['icPelanggan'];

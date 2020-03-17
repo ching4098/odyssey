@@ -1,4 +1,6 @@
 <?php
+session_start();
+require ("../functions/keselamatan.php");
 require('../functions/config.php');
 $idBilik = $_GET['idBilik'];
 //Hapus rekod bilik
