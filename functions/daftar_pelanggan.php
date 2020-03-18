@@ -44,48 +44,57 @@ if (isset($_POST['icPelanggan'])){
 <fieldset>
             <!-- Papar Borang Pendaftaran -->
             <form method="POST" style="padding-left:20%;padding-right:20%">
-                <br>Nombor Kad Pengenalan<br>
-                <font size="1" color="ff0000">*Tanpa tanda "-"</font><br>
-                <input class="input1" type="text" name="icPelanggan" id="icPelanggan"
-                placeholder="090807030555" maxlength="12" size="15"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                required autofocus><br>
+            <br><div class="input-field">
+                <i class="material-icons prefix">perm_identity</i>
+                <input id="icon_prefix" type="text" name="icPelanggan" placeholder="090807030555" maxlength="12" size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+                <label for="icon_prefix">Nombor Kad Pengenalan <font size="3" color="ff0000">*Tanpa tanda "-"</font></label>
+            </div>
 
-                Nama Anda<br>
-                <input class="input2" type="text" name="namaPelanggan" id="namaPelanggan"
-                placeholder="Ray Teoh" size="60" required ><br>
+            <div class="input-field">
+                <i class="material-icons prefix">account_box</i>
+                <input id="icon_prefix" type="text" name="namaPelanggan" placeholder="Muhammad Faris"  size="60" required>
+                <label for="namaPelanggan">Nama Pelanggan</label>
+            </div>
 
-                Nombor Telefon<br>
-                <input class="input3" type="text" name="noTelefon" id="noTelefon" placeholder="0187651769"
-                maxlength='12'size="15"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                required autofocus><br>
+            <div class="input-field">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_prefix" type="text" name="noTelefon" placeholder="0187651769" maxlength="12" size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+                <label for="noTelefon">Nombor Telefon</label>
+            </div>
 
-                Alamat (NOMBOR)<br>
-                <input class="input4" type="text" name="alamat1" id="alamat1"
-                placeholder="48" size="60" required ><br>
+            <div class="input-field">
+                <i class="material-icons prefix">home</i>
+                <input id="icon_prefix" type="text" name="alamat1" placeholder="Alamat 1"  size="60" required>
+                <label for="alamat1">Alamat 1</label>
+            </div>
 
-                Alamat (JALAN)<br>
-                <input class="input5" type="text" name="alamat2" id="alamat2"
-                placeholder="Jalan Gembira" size="60" required ><br>
+            <div class="input-field">
+                <i class="material-icons prefix">home</i>
+                <input id="icon_prefix" type="text" name="alamat2" placeholder="Alamat 2"  size="60">
+                <label for="alamat2">Alamat 2</label>
+            </div>
 
-                Bandar<br>
-                <input class="input6" type="text" name="bandar" id="bandar"
-                placeholder="Georgetown" size="60" required ><br>
+            <div class="input-field">
+                <i class="material-icons prefix">location_city</i>
+                <input id="icon_prefix" type="text" name="bandar" placeholder="Bandar"  size="40" required>
+                <label for="bandar">Bandar</label>
+            </div>
 
-                Poskod<br>
-                <input class="input7" type="text" name="poskod" id="poskod" placeholder="18000"
-                maxlength="5" size="15"
-                onkeypress='return event.charCode >= 48 && event.charCode <= 57'
-                required autofocus><br>
+            <div class="input-field">
+                <i class="material-icons prefix">local_post_office</i>
+                <input id="icon_prefix" type="text" name="poskod" placeholder="17000"  size="7" maxlength="5" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+                <label for="poskod">Poskod</label>  
+            </div>
 
-                Negeri<br>
-                <input class="input8" type="text" name="negeri" id="negeri"
-                placeholder="Pulau Pinang" size="30" required><br><br>
-        
-                <button class="waves-effect waves-light btn-small purple" class="daftar" type="submit">Daftar</button>
-                <button class="waves-effect waves-light btn-small purple" class="reset" type="reset">Reset</button><br><br>
-                *Pastikan semua maklumat ditaip dengan teliti.
+            <div class="input-field">
+                <i class="material-icons prefix">account_balance</i>
+                <input id="icon_prefix" type="text" name="negeri" placeholder="Negeri"  size="7" required>
+                <label for="negeri">Negeri</label> 
+            </div>
+
+            <button class="waves-effect waves-light btn-small" class="daftar" type="submit">Daftar</button>
+            <button class="waves-effect waves-light btn-small" class="reset" type="reset">Reset</button><br><br>
+                <h6>*Pastikan semua maklumat ditaip dengan teliti.</h6>
             </form>
         </fieldset>
         </main>

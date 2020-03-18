@@ -48,7 +48,7 @@ while($res = mysqli_fetch_array($result)){
                         <label for="text">Jenis Bilik</label>
                     </div>
                     <input type="hidden" name="idBilik" value="<?php echo $_GET['idBilik'];?>" /><br><br>
-                    <button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
+                    <button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
                 </fieldset>
             </form>
         </main></body>

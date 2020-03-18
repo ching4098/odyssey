@@ -62,7 +62,7 @@ require('../components/header.php');
                         </tr>
                         <tr>
                             <td colspan="3" style="text-align:center">
-                                <button class="waves-effect waves-light btn-small purple" type="submit" name="button" id="button" value="Cetak">Cetak</button>
+                                <button class="waves-effect waves-light btn-small" type="submit" name="button" id="button" value="Cetak">Cetak</button>
                             </td>
                         </tr>
                     </table>

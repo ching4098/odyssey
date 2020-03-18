@@ -80,7 +80,7 @@ while ($info1=mysqli_fetch_array($data1))
             if ($jumHari2>3)
             {
                 ?>
-                <a class="waves-effect waves-light btn-small purple" href="../functions/hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
+                <a class="waves-effect waves-light btn-small" href="../functions/hapus_tempahan.php?id=<?php echo $info1['idTempahan'];?>">
                 Batal Tempahan</a>
                 <?php
             }
@@ -102,7 +102,7 @@ while ($info1=mysqli_fetch_array($data1))
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam
                 tempoh 3 hari SEBELUM tarikh masuk.</font>
                 <br><br>
-                <a class="waves-effect waves-light btn-small purple" href="javascript:window.print()">Cetak Laporan</a>
+                <a class="waves-effect waves-light btn-small" href="javascript:window.print()">Cetak Laporan</a>
         </center>
         </main></body>
         </html>

@@ -19,7 +19,7 @@ require('../components/header.php');
             <table class="highlight" >
                 <tr>
                     <td colspan="4"  valign="middle" align="middle">
-                        <a class="waves-effect waves-light btn-small purple" href="../functions/tambah_bilik.php">[+] Tambah Bilik</a></td>
+                        <a class="waves-effect waves-light btn-small" href="../functions/tambah_bilik.php">[+] Tambah Bilik</a></td>
 </tr>
 <tr>
     <td width="10%"><b>Bil.</b></td>
@@ -37,9 +37,9 @@ while ($info1=mysqli_fetch_array($data1))
         <td><?php echo $no; ?></td>
         <td><?php echo $info1['jenisBilik']; ?></td>
         <td>RM <?php echo $info1['hargaBilik']; ?></td>
-        <td><a class="waves-effect waves-light btn-small purple" href="../functions/kemaskini_bilik.php?idBilik=
+        <td><a class="waves-effect waves-light btn-small" href="../functions/kemaskini_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Kemaskini</a> |
-        <a class="waves-effect waves-light btn-small purple" href="../functions/hapus_bilik.php?idBilik=
+        <a class="waves-effect waves-light btn-small" href="../functions/hapus_bilik.php?idBilik=
         <?php echo $info1['idBilik'];?>">Hapus</a>
 </td>
 </tr>

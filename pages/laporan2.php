@@ -103,7 +103,7 @@ require('../functions/config.php');
         Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center>
             <br>
-            <a class="waves-effect waves-light btn-small purple" href="javascript:window.print()">Cetak Laporan</a>
+            <a class="waves-effect waves-light btn-small" href="javascript:window.print()">Cetak Laporan</a>
         </center>
         </table>
     </main></body>

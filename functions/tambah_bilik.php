@@ -27,12 +27,12 @@ if(isset($_POST['jenisBilik'])) {
                 <fieldset style="padding-left:25%;padding-right:25%">
                     <label>Jenis Bilik:</label><input type="text" name="jenisBilik" id="jenisBilik" /><br><br>
                     <label>Harga:</label><input type="text" name="hargaBilik" id="hargaBilik" />
-                    <br><br><button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Tambah Bilik">Tambah Bilik</button>
+                    <br><br><button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Tambah Bilik">Tambah Bilik</button>
                     <br>
                     <br>
                 </fieldset>
             </form>
-            <br><a class="waves-effect waves-light btn-small purple" href="../pages/bilik.php">Ke Senarai Bilik</a>
+            <br><a class="waves-effect waves-light btn-small" href="../pages/bilik.php">Ke Senarai Bilik</a>
         </body>
     </main></center>
 </html>

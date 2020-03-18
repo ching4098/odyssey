@@ -52,19 +52,20 @@ while($res = mysqli_fetch_array($result)) {
                     </div>
                     </div>
                     Jenis Pengguna:
-                    <br><br><br><select class=browser-default name="jenisPengguna" id="jenisPengguna" >
-                        <option>Sila Memilih Opsyen Anda</option>
+                    <br><br><br><select name="jenisPengguna" id="jenisPengguna" >
+                        <option value="" disabled selected>Sila Memilih Opsyen Anda</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
                     </select>
                     </div>
                     <input type="hidden" name="idPengguna" value=<?php echo $uid;?> ><br><br>
-                    <button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
+                    <button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
                     <br>
                     <br>
                     <br>
                 </fieldset>
             </form>
         </body>
+        <script>M.AutoInit();</script>
     </main></center>
 </html>

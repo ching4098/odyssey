@@ -19,7 +19,7 @@ require('../components/header.php');
             <label>Pilih lokasi fail CSV/Excel:</label><br>
             <form action="../functions/import_proses.php" method="POST" name="upload_excel" enctype="multipart/form-data"><br>
                 <div class="file-field input-field">
-                    <div class="btn purple">
+                    <div class="btn">
                         <span>File</span>
                         <input type="file" name="file" id="file" class="input-large">
                     </div>
@@ -27,14 +27,9 @@ require('../components/header.php');
                     <input class="file-path validate" type="text">
                 </div>
             </div>
-            <button class="waves-effect waves-light btn-small purple" type="submit" id="submit" name="Import">Upload</button><br>
+            <button class="waves-effect waves-light btn-small" type="submit" id="submit" name="Import">Upload</button><br>
             </form><br>
             </fieldset>
         </body>
-        <script>
-            function getInputFile() {
-                document.getElementById("file").click();
-            };
-        </script>
     </center></main>
 </html>

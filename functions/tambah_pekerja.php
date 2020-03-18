@@ -26,18 +26,21 @@ if(isset($_POST['namaPengguna'])) {
                     <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" required><br><br>
                     <label>Kata Laluan:</label><input type="password" name="kataLaluan" id="kataLaluan" required><br><br>
                     <label for="jenisPengguna">Jenis Pengguna:</label>
-                        <select class="browser-default" id="jenisPengguna" name="jenisPengguna" required>
+                        <select id="jenisPengguna" name="jenisPengguna" required>
                         <option value="" disabled selected>Pilih Status Pengguna:</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
                     </select>
                     <br>
-                    <button class="waves-effect waves-light btn-small purple" type="submit" name="update" id="submit" value="Tambah Pengguna" />Tambah Pengguna</button>
+                    <button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Tambah Pengguna" />Tambah Pengguna</button>
                     <br>
                     <br>
                 </fieldset>
             </form>
-            <br><a class="waves-effect waves-light btn-small purple" href="../pages/pekerja.php">Ke Senarai Pekerja</a><br>
+            <br><a class="waves-effect waves-light btn-small" href="../pages/pekerja.php">Ke Senarai Pekerja</a><br>
         </body>
+        <script>
+            M.AutoInit();
+        </script>
     </main></center>
 </html>
