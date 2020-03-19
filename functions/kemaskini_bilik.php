@@ -1,6 +1,6 @@
 <?php
 session_start();
-require ("../functions/keselamatan.php");
+require ('../functions/keselamatan.php');
 require('../functions/config.php');
 require('../components/header.php');
 if(isset($_POST['update'])){
@@ -9,8 +9,8 @@ if(isset($_POST['update'])){
     $hargaBilik = $_POST['hargaBilik'];
     //kemaskini dengan  rekod baru
     $result = mysqli_query($samb,
-    "UPDATE bilik SET namaPelanggan='$namaPelanggan',harga='$hargaBilik' WHERE idBilik=$idBilik");
-    echo"<script
+    "UPDATE bilik SET jenisBilik='$jenisBilik',harga='$hargaBilik' WHERE idBilik=$idBilik");
+    echo"<script>
     alert('Kemaskini rekod telah berjaya');
     window.location='../pages/bilik.php'</script>";
 }
@@ -38,17 +38,17 @@ while($res = mysqli_fetch_array($result)){
             <form name="form1" action="../functions/kemaskini_bilik.php" method="POST">
                 <fieldset style="padding-left:20%;padding-right:20%">
                     <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field">
                         <input id="jenisBilik" type="text" name="jenisBilik" placeholder="<?php echo $jenisBilik;?>">
                         <label for="text">Jenis Bilik</label>
                     </div>
                     <div class="row">
-                    <div class="input-field col s12">
+                    <div class="input-field">
                         <input id="hargaBilik" type="text" name="hargaBilik" placeholder="<?php echo $hargaBilik;?>">
-                        <label for="text">Jenis Bilik</label>
+                        <label for="text">Harga Bilik</label>
                     </div>
                     <input type="hidden" name="idBilik" value="<?php echo $_GET['idBilik'];?>" /><br><br>
-                    <button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Kemaskini">Kemaskini</button>
+                    <button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit">Kemaskini</button>
                 </fieldset>
             </form>
         </main></body>

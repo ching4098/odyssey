@@ -12,7 +12,7 @@ require ("../functions/keselamatan.php");
         
     <?php include("../components/menu.php"); ?>    
     <main>
-    <h3>Rekod Tempahan <?php echo $namarumah ?></h3>
+    <h3>Rekod Tempahan <?php echo $namarumah ?></h3><br>
     <center>
         
     <table class="highlight" width="1000" border="1" align="center">
