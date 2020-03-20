@@ -7,6 +7,7 @@ if ($_SESSION['level']=="ADMIN")
     <link href="../css/global.css" rel="stylesheet" type="text/css" >
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
         <ul id="slide-out" class="sidenav sidenav-fixed">
@@ -27,6 +28,18 @@ if ($_SESSION['level']=="ADMIN")
             <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script>
+        var options = {
+    
+        label: '🌓', // default: ''
+        
+        }
+
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
+    </script>
     <script>
     var pageFontSize = 15;
     function zoomIn() {
@@ -66,6 +79,10 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script>
+        new Darkmode().showWidget();
+    </script>
     <script>
     var pageFontSize = 15;
     function zoomIn() {
