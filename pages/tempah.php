@@ -4,7 +4,7 @@ require ("../functions/keselamatan.php");
 //sambung ke pangkalan data
 require('../functions/config.php');
 //sambung ke fail template
-require('../components/header.php');
+
 
 ?>
 <html>
@@ -57,7 +57,7 @@ require('../components/header.php');
                     <h6>*Pilihan hanya dibenarkan sekali sahaja.</h6>
                 </form>
                 </FIELDSET></main>
-                <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                
                 <script>
                    M.AutoInit();
                 </script>

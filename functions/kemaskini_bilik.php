@@ -2,7 +2,7 @@
 session_start();
 require ('../functions/keselamatan.php');
 require('../functions/config.php');
-require('../components/header.php');
+
 if(isset($_POST['update'])){
     $idBilik = $_POST['idBilik'];
     $jenisBilik = $_POST['jenisBilik'];

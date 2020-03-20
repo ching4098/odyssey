@@ -2,7 +2,7 @@
 session_start();
 require ("../functions/keselamatan.php");
 require('../functions/config.php');
-require('../components/header.php');
+
 if(isset($_POST['jenisBilik'])) {
     $jenisBilik=$_POST['jenisBilik'];
     $hargaBilik=$_POST['hargaBilik'];

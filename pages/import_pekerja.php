@@ -2,7 +2,7 @@
 session_start();
 require ('../functions/keselamatan.php');
 require('../functions/config.php');
-require('../components/header.php');
+
 ?>
 <html>
     <head>
