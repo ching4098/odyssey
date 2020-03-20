@@ -81,7 +81,15 @@ if ($_SESSION['level']=="ADMIN")
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
     <script>
-        new Darkmode().showWidget();
+        var options = {
+    
+        label: '🌓', // default: ''
+        
+        }
+
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        
     </script>
     <script>
     var pageFontSize = 15;
