@@ -32,6 +32,8 @@ if(isset($_POST['namaPengguna'])) {
                     <br>
                     <br>                    
                     <h3>Sistem Pengurusan Homestay Odyssey</h3>
+                    <br>
+                    <br>
                     <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="namaPengguna" type="text" class="validate" name="namaPengguna" required>
