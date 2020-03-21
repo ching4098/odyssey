@@ -62,11 +62,12 @@ if ($_SESSION['level']=="ADMIN")
     <link href="../css/global.css" rel="stylesheet" type="text/css" >
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
-        <ul>
-        <br><li><a class="waves-effect" href="../pages/index.php"><i class="material-icons">assessment</i>Odyssey Homestay</a></li><br>
-        <li><div class="divider"></div></li><br>
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+            <br><li><a class="waves-effect" href="../pages/index.php"><i class="material-icons">assessment</i>Odyssey Homestay</a></li><br>
+            <li><div class="divider"></div></li><br>
             <li><a class="waves-effect" href="../pages/tempah.php" ><i class="material-icons">book</i>Masuk Tempahan</a></li>
             <li><a class="waves-effect" href="../pages/semak.php"><i class="material-icons">library_add_check</i>Semak Tempahan</a></li>
             <li><a class="waves-effect" href="../pages/laporan.php"><i class="material-icons">subject</i>Laporan</a></li>
@@ -76,7 +77,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" onclick="zoomOut();"><i class="material-icons">remove</i>Kecilkan Saiz</a></li>
             <br>
             <li><div class="divider"></div></li>
-            <li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
+            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
