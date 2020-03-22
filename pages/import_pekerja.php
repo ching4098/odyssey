@@ -6,6 +6,7 @@ require('../functions/config.php');
 ?>
 <html>
     <head>
+    <title>Import Pekerja</title>
     <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>

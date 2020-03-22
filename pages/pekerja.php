@@ -7,6 +7,7 @@ require('../functions/config.php');
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../css/global.css">
+        <title>Senarai Pekerja</title>
     </head>
     <body>
         <?php include("../components/menu.php"); ?>
