@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2020 at 02:06 PM
+-- Generation Time: Apr 01, 2020 at 09:27 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -35,7 +35,7 @@ CREATE TABLE `alamat` (
   `bandar` varchar(20) NOT NULL,
   `poskod` varchar(5) NOT NULL,
   `negeri` varchar(20) NOT NULL,
-  `icPelanggan` varchar(20) NOT NULL
+  `icPelanggan` varchar(12) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -64,10 +64,15 @@ CREATE TABLE `bilik` (
 --
 
 INSERT INTO `bilik` (`idBilik`, `jenisBilik`, `hargaBilik`) VALUES
-(1, 'SINGLE', '690.00'),
-(2, 'DOUBLE', '1500.00'),
-(3, 'TRIPLE', '2000.00'),
-(6, 'SINGLE2', '150.00');
+(1, 'SINGLE', '150.00'),
+(2, 'DOUBLE', '500.00'),
+(3, 'TRIPLE', '800.00'),
+(6, 'SINGLE2', '150.00'),
+(7, 'SINGLE3', '150.00'),
+(8, 'DOUBLE2', '500.00'),
+(9, 'DOUBLE3', '500.00'),
+(10, 'TRIPLE2', '800.00'),
+(11, 'TRIPLE3', '800.00');
 
 -- --------------------------------------------------------
 
@@ -164,7 +169,8 @@ INSERT INTO `tempahan` (`idTempahan`, `tarikhMasuk`, `tarikhKeluar`, `icPelangga
 -- Indexes for table `alamat`
 --
 ALTER TABLE `alamat`
-  ADD PRIMARY KEY (`idAlamat`);
+  ADD PRIMARY KEY (`idAlamat`),
+  ADD KEY `icPelanggan` (`icPelanggan`) USING BTREE;
 
 --
 -- Indexes for table `bilik`
@@ -195,8 +201,8 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `tempahan`
   ADD PRIMARY KEY (`idTempahan`),
-  ADD KEY `idPelanggan` (`icPelanggan`),
-  ADD KEY `idBilik` (`idBilik`);
+  ADD KEY `idBilik` (`idBilik`),
+  ADD KEY `icPelanggan` (`icPelanggan`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -212,7 +218,7 @@ ALTER TABLE `alamat`
 -- AUTO_INCREMENT for table `bilik`
 --
 ALTER TABLE `bilik`
-  MODIFY `idBilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idBilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `keuntungan`
@@ -231,6 +237,17 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `tempahan`
   MODIFY `idTempahan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tempahan`
+--
+ALTER TABLE `tempahan`
+  ADD CONSTRAINT `tempahan_ibfk_1` FOREIGN KEY (`idBilik`) REFERENCES `bilik` (`idBilik`),
+  ADD CONSTRAINT `tempahan_ibfk_2` FOREIGN KEY (`icPelanggan`) REFERENCES `pelanggan` (`icPelanggan`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
