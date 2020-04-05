@@ -70,7 +70,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><div class="divider"></div></li><br>
             <li><a class="waves-effect" href="../pages/tempah.php" ><i class="material-icons">book</i>Masuk Tempahan</a></li>
             <li><a class="waves-effect" href="../pages/semak.php"><i class="material-icons">library_add_check</i>Semak Tempahan</a></li>
-            <li><a class="waves-effect" href="../pages/laporan.php"><i class="material-icons">subject</i>Laporan</a></li>
+            <br>
             <li><div class="divider"></div></li>
             <br>
             <li><a class="waves-effect" onclick="zoomIn();"><i class="material-icons">add</i>Tambah Saiz</a></li>
