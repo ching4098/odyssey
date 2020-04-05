@@ -1,5 +1,6 @@
 <?php
 session_start();
 session_destroy();
-header ("location: ../pages/login.php");
+echo"<script>alert('Anda telah berjaya log keluar');
+window.location='../pages/login.php'</script>";
 ?>

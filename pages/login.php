@@ -18,15 +18,17 @@ if (isset($_POST['namaPengguna'])){
     if(mysqli_num_rows($query) == 0||$row['kataLaluan']!=$pass)
     {
         //login error
-        echo "<script>alert('ID Pengguna atau Kata Laluan anda adalah yang salah');
+        echo "<script>alert('Nama Pengguna atau Kata Laluan anda adalah yang salah');
         window.location='../pages/login.php'</script>";
     }
     else{
         $_SESSION['idPengguna']=$row['idPengguna'];
         $_SESSION['level']=$row['jenisPengguna'];
-
+        
         //open designated index.php
-        header("Location: ../pages/index.php");
+        echo "<script>alert('Anda telah berjaya log masuk');
+        window.location='../pages/index.php'</script>";
+        
     }
 }
 ?>

@@ -9,7 +9,7 @@ if(isset($_POST['namaPengguna'])) {
     $jenisPengguna = $_POST['jenisPengguna'];
     //add new record
     $result = mysqli_query($samb, "INSERT INTO pengguna (namaPengguna, kataLaluan, jenisPengguna) VALUES ('$namaPengguna','$kataLaluan','$jenisPengguna')");
-    echo "<script>alert('Penambahan Rekod Pengguna Baru telah Berjaya Dibuat'); window.location='../pages/login.php'</script>";
+    echo "<script>alert('Pengguna telah didaftar'); window.location='../pages/login.php'</script>";
 }
 ?>
 
