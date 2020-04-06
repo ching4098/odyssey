@@ -2,11 +2,15 @@
 session_start();
 require ("../functions/keselamatan.php");
 require('../functions/config.php');
+$idPengguna=$_GET['idPengguna'];
 if (isset($_POST['icPelanggan'])){
     $icPelanggan = $_POST['icPelanggan'];
     $tarikhMasuk = $_POST['tarikhMasuk'];
     $idBilik =$_POST['idBilik'];
     $tarikhKeluar =$_POST['tarikhKeluar'];
+    //get idPengguna from URL
+    
+
     //dapatkan jumlah bayaran bilik
     $duit=mysqli_query($samb,"SELECT * FROM bilik
     WHERE idBilik='$idBilik'");
@@ -25,9 +29,9 @@ if (isset($_POST['icPelanggan'])){
     {
         //tambah rekod baru ke dalam table
         $rekod = "INSERT INTO tempahan
-        (idTempahan,tarikhMasuk,tarikhKeluar,icPelanggan,idBilik,bayaran)
+        (idTempahan,tarikhMasuk,tarikhKeluar,icPelanggan,idBilik,bayaran,idPengguna)
         VALUES (NULL,'$tarikhMasuk','$tarikhKeluar','$icPelanggan','$idBilik',
-        '$tunjukDuit[hargaBilik]')";
+        '$tunjukDuit[hargaBilik]','$idPengguna')";
         //Melaksanakan pertanyaan rekod dengan sambungan ke p.data
         $hasil = mysqli_query($samb,$rekod);
         //papar mesej berjaya atau gagal simpan rekod baharu

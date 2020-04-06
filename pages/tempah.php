@@ -3,10 +3,11 @@ session_start();
 require ("../functions/keselamatan.php");
 //sambung ke pangkalan data
 require('../functions/config.php');
-//sambung ke fail template
-
-
+$data1=mysqli_query($samb,"SELECT * FROM pengguna");
+    $info3=mysqli_fetch_array($data1)
 ?>
+
+
 <html>
     <head>
         <title>Masuk Tempahan</title>
@@ -20,7 +21,7 @@ require('../functions/config.php');
         <br><a class="waves-effect waves-light btn-small" href="../functions/daftar_pelanggan.php">[+] Pelanggan Baru</a>
         <br>
         
-        <br><hr><form style="padding-left:20%;padding-right:20%" align="middle" method="POST" action="../functions/masuk_tempahan.php">
+        <br><hr><form style="padding-left:20%;padding-right:20%" align="middle" method="POST" action="../functions/masuk_tempahan.php?idPengguna=<?php echo $info3['idPengguna']; ?>">
             <!-- BORANG CARIAN NAMA PELANGGAN MULA -->
             <label>IC Pelanggan:</label><div class="input-field"><select name="icPelanggan" required>
                     <option value="" disabled selected>Pilih IC Pelanggan</option>
@@ -43,13 +44,13 @@ require('../functions/config.php');
                     ?>
                     </select><br>
                     <div class="input-field">
-                        <label>Tarikh Masuk</label>
-                        <input type="text" name="tarikhMasuk" class="datepicker" required/>
+                        <label>Tarikh Masuk</label><br>
+                        <input type="date" name="tarikhMasuk" required/>
                     </div>
                     <br>
                     <div class="input-field">
-                        <label>Tarikh Keluar</label>
-                        <input type="text" name="tarikhKeluar" class="datepicker2" required/>
+                        <label>Tarikh Keluar</label><br>
+                        <input type="date" name="tarikhKeluar" required/>
                     </div>
                     <br><br>
                     <button class="waves-effect waves-light btn-small" type="submit">Tempah</button>

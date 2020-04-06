@@ -1,6 +1,7 @@
 <?php
 if ($_SESSION['level']=="ADMIN")
 {
+    
 ?>
 <head>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +14,7 @@ if ($_SESSION['level']=="ADMIN")
         <ul id="slide-out" class="sidenav sidenav-fixed">
             <br><li><a class="waves-effect" href="../pages/index.php"><i class="material-icons">assessment</i>Odyssey Homestay</a></li><br>
             <li><div class="divider"></div></li><br>
-            <li><a class="waves-effect" href="../pages/tempah.php" ><i class="material-icons">book</i>Masuk Tempahan</a></li>
+            <li><a class="waves-effect" href="../pages/tempah.php"><i class="material-icons">book</i>Masuk Tempahan</a></li>
             <li><a class="waves-effect" href="../pages/semak.php"><i class="material-icons">library_add_check</i>Semak Tempahan</a></li>
             <li><a class="waves-effect" href="../pages/laporan.php"><i class="material-icons">subject</i>Laporan</a></li>
             <li><a class="waves-effect" href="../pages/bilik.php"><i class="material-icons">room_service</i>Setup Bilik</a></li>

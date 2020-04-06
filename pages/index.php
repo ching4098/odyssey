@@ -121,7 +121,7 @@ require('../functions/config.php');
       //Boolean - Whether grid lines are shown across the chart
       scaleShowGridLines      : false,
       //String - Colour of the grid lines
-      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      scaleGridLineColor      : 'rgb(26,162,96)',
       //Number - Width of the grid lines
       scaleGridLineWidth      : 1,
       //Boolean - Whether to show horizontal lines (except X axis)
@@ -133,7 +133,7 @@ require('../functions/config.php');
       //Number - Tension of the bezier curve between points
       bezierCurveTension      : 0.3,
       //Boolean - Whether to show a dot for each point
-      pointDot                : false,
+      pointDot                : true,
       //Number - Radius of each point dot in pixels
       pointDotRadius          : 4,
       //Number - Pixel width of point dot stroke

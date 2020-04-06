@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2020 at 09:27 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Apr 06, 2020 at 09:19 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,7 +35,7 @@ CREATE TABLE `alamat` (
   `bandar` varchar(20) NOT NULL,
   `poskod` varchar(5) NOT NULL,
   `negeri` varchar(20) NOT NULL,
-  `icPelanggan` varchar(12) CHARACTER SET latin1 NOT NULL
+  `icPelanggan` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -43,9 +43,7 @@ CREATE TABLE `alamat` (
 --
 
 INSERT INTO `alamat` (`idAlamat`, `alamat1`, `alamat2`, `bandar`, `poskod`, `negeri`, `icPelanggan`) VALUES
-(1, '48', 'Jalab Gembira', 'Georgetown', '15000', 'Pulau Pinang', '090807030555'),
-(3, '36', 'Jalan Tembaga', 'Johor Bahru', '54000', 'Johor', '654475876976'),
-(4, '79A', 'Jalan Jarang', 'Georgetown', '45000', 'Pulau Pinang', '145825611414');
+(3, '48', 'Jalan Gembira', 'Johor Bahru', '15000', 'Johor', '090807030555');
 
 -- --------------------------------------------------------
 
@@ -57,22 +55,14 @@ CREATE TABLE `bilik` (
   `idBilik` int(11) NOT NULL,
   `jenisBilik` varchar(50) NOT NULL,
   `hargaBilik` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `bilik`
 --
 
 INSERT INTO `bilik` (`idBilik`, `jenisBilik`, `hargaBilik`) VALUES
-(1, 'SINGLE', '150.00'),
-(2, 'DOUBLE', '500.00'),
-(3, 'TRIPLE', '800.00'),
-(6, 'SINGLE2', '150.00'),
-(7, 'SINGLE3', '150.00'),
-(8, 'DOUBLE2', '500.00'),
-(9, 'DOUBLE3', '500.00'),
-(10, 'TRIPLE2', '800.00'),
-(11, 'TRIPLE3', '800.00');
+(1, 'SINGLE', '150.00');
 
 -- --------------------------------------------------------
 
@@ -86,13 +76,6 @@ CREATE TABLE `keuntungan` (
   `tarikh` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `keuntungan`
---
-
-INSERT INTO `keuntungan` (`idKeuntungan`, `amaun`, `tarikh`) VALUES
-(16, 4500, '2019-03-24');
-
 -- --------------------------------------------------------
 
 --
@@ -102,17 +85,15 @@ INSERT INTO `keuntungan` (`idKeuntungan`, `amaun`, `tarikh`) VALUES
 CREATE TABLE `pelanggan` (
   `icPelanggan` varchar(12) NOT NULL,
   `namaPelanggan` varchar(80) NOT NULL,
-  `noTelefon` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `noTelefon` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`icPelanggan`, `namaPelanggan`, `noTelefon`) VALUES
-('145825611414', 'Muhammad Farid bin Isyak', '018756230011'),
-('214748364759', 'Ray Teoh', '0189999999'),
-('654475876976', 'Yeoh Ah Li', '0179999999');
+('090807030555', 'Ray Teoh', '0189999999');
 
 -- --------------------------------------------------------
 
@@ -125,17 +106,14 @@ CREATE TABLE `pengguna` (
   `namaPengguna` varchar(80) NOT NULL,
   `kataLaluan` varchar(25) NOT NULL,
   `jenisPengguna` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pengguna`
 --
 
 INSERT INTO `pengguna` (`idPengguna`, `namaPengguna`, `kataLaluan`, `jenisPengguna`) VALUES
-(1, 'admin', '123456', 'ADMIN'),
-(3, 'ray', '123456', 'ADMIN'),
-(9, 'ermm', '456789', 'PEKERJA'),
-(14, 'friday', '123456', 'ADMIN');
+(2, 'admin', '123456', 'ADMIN');
 
 -- --------------------------------------------------------
 
@@ -144,22 +122,21 @@ INSERT INTO `pengguna` (`idPengguna`, `namaPengguna`, `kataLaluan`, `jenisPenggu
 --
 
 CREATE TABLE `tempahan` (
-  `idTempahan` int(5) NOT NULL,
+  `idTempahan` int(11) NOT NULL,
   `tarikhMasuk` date NOT NULL,
   `tarikhKeluar` date NOT NULL,
   `icPelanggan` varchar(12) NOT NULL,
-  `idBilik` int(2) NOT NULL,
-  `bayaran` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idBilik` int(11) NOT NULL,
+  `bayaran` decimal(10,2) NOT NULL,
+  `idPengguna` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tempahan`
 --
 
-INSERT INTO `tempahan` (`idTempahan`, `tarikhMasuk`, `tarikhKeluar`, `icPelanggan`, `idBilik`, `bayaran`) VALUES
-(16, '2020-03-18', '2020-03-24', '214748364759', 1, '690.00'),
-(17, '2020-03-27', '2020-04-01', '654475876976', 3, '2000.00'),
-(18, '2020-03-30', '2020-04-03', '145825611414', 2, '1500.00');
+INSERT INTO `tempahan` (`idTempahan`, `tarikhMasuk`, `tarikhKeluar`, `icPelanggan`, `idBilik`, `bayaran`, `idPengguna`) VALUES
+(8, '2020-06-06', '2020-06-07', '090807030555', 1, '150.00', 2);
 
 --
 -- Indexes for dumped tables
@@ -170,7 +147,7 @@ INSERT INTO `tempahan` (`idTempahan`, `tarikhMasuk`, `tarikhKeluar`, `icPelangga
 --
 ALTER TABLE `alamat`
   ADD PRIMARY KEY (`idAlamat`),
-  ADD KEY `icPelanggan` (`icPelanggan`) USING BTREE;
+  ADD KEY `icPelanggan` (`icPelanggan`);
 
 --
 -- Indexes for table `bilik`
@@ -201,8 +178,9 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `tempahan`
   ADD PRIMARY KEY (`idTempahan`),
+  ADD KEY `icPelanggan` (`icPelanggan`),
   ADD KEY `idBilik` (`idBilik`),
-  ADD KEY `icPelanggan` (`icPelanggan`);
+  ADD KEY `idPengguna` (`idPengguna`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -212,42 +190,31 @@ ALTER TABLE `tempahan`
 -- AUTO_INCREMENT for table `alamat`
 --
 ALTER TABLE `alamat`
-  MODIFY `idAlamat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idAlamat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `bilik`
 --
 ALTER TABLE `bilik`
-  MODIFY `idBilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idBilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `keuntungan`
 --
 ALTER TABLE `keuntungan`
-  MODIFY `idKeuntungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idKeuntungan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `idPengguna` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idPengguna` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tempahan`
 --
 ALTER TABLE `tempahan`
-  MODIFY `idTempahan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tempahan`
---
-ALTER TABLE `tempahan`
-  ADD CONSTRAINT `tempahan_ibfk_1` FOREIGN KEY (`idBilik`) REFERENCES `bilik` (`idBilik`),
-  ADD CONSTRAINT `tempahan_ibfk_2` FOREIGN KEY (`icPelanggan`) REFERENCES `pelanggan` (`icPelanggan`);
+  MODIFY `idTempahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

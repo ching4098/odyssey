@@ -24,7 +24,7 @@ if (isset($_POST['icPelanggan'])){
     //papar mesej berjaya atau gagal simpan rekod baru
     if($hasil){
         echo "<script>alert('Pendaftaran Pelanggan Baharu Berjaya');
-        window.location='../pages/dashboardAdmin.php'</script>";
+        window.location='../pages/tempah.php'</script>";
     }else{
         echo "<script>alert('Pendaftaran Pelanggan Baharu Gagal');
         window.location='../functions/daftar_pelanggan.php'</script>";

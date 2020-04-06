@@ -22,8 +22,9 @@ require ("../functions/keselamatan.php");
     <td width="7%"><b>Tarikh Masuk</b></td>
     <td width="7%"><b>Tarikh Keluar</b></td>
     <td width="5%"><b>Bil Hari</b></td>
-    <td width="15%"><b>Nama Pelanggan</b></td>
+    <td width="10%"><b>Nama Pelanggan</b></td>
     <td width="10%"><b>Nombor HP</b></td>
+    <td width="10%"><b>Diuruskan Oleh</b></td>
     <td width="10%"><b>Harga</b></td>
     <td width="10%"><b>Jumlah Harga</b></td>
     <td width="10%"><b>Tindakan</b></td>
@@ -38,13 +39,14 @@ $jumBesar=0;
 while ($info1=mysqli_fetch_array($data1))
 {
     //sambung ke table bilik berdasarkan kunci asing
-    $databilik=mysqli_query($samb, "SELECT * FROM bilik
-    WHERE idBilik='$info1[idBilik]'");
+    $databilik=mysqli_query($samb, "SELECT * FROM bilik WHERE idBilik='$info1[idBilik]'");
     $infobilik=mysqli_fetch_array($databilik);
     //sambung ke table pelanggan berdasarkan kunci asing
-    $datapelanggan=mysqli_query($samb,"SELECT * FROM pelanggan 
-    WHERE icPelanggan='$info1[icPelanggan]'");
+    $datapelanggan=mysqli_query($samb,"SELECT * FROM pelanggan WHERE icPelanggan='$info1[icPelanggan]'");
     $infopelanggan=mysqli_fetch_array($datapelanggan);
+
+    $datapengguna=mysqli_query($samb,"SELECT * FROM pengguna WHERE idPengguna='$info1[idPengguna]'");
+    $infopengguna=mysqli_fetch_array($datapengguna);
 
     //data beza hari
     $date1=date_create($info1['tarikhMasuk']);
@@ -65,9 +67,11 @@ while ($info1=mysqli_fetch_array($data1))
         <td><?php echo $diff->format("%a hari"); ?></td>
         <td><?php echo $infopelanggan['namaPelanggan']; ?></td>
         <td><?php echo $infopelanggan['noTelefon']; ?></td>
+        <td><?php echo $infopengguna['namaPengguna']; ?></td>
         <td>RM <?php echo number_format($info1['bayaran'],2); ?></td>
         <td>RM <?php echo number_format($info1['bayaran']*$jumHari,2);
         $jumBesar+=($info1['bayaran']*$jumHari); ?></td>
+        
 
         <td>
             <?php
@@ -89,7 +93,7 @@ while ($info1=mysqli_fetch_array($data1))
             </tr>
             <?php $no++; } ?>
             <tr>
-                <td colspan="8" align="right">
+                <td colspan="9" align="right">
                     Jumlah Keseluruhan
         </td>
         <td>RM <?php echo number_format($jumBesar,2);?></td>
