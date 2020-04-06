@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Odyssey
+        </title>
+        <link rel="stylesheet" type="text/css" href="../css/materialize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>  
+            <div class="row" style="padding-top:7%">
+            
+
+                <form class="col s5 push-s1" method="POST" action="../functions/loginfunc.php">
+                    <br>
+                    <br>                    
+                    <h3>Sistem Pengurusan Homestay Odyssey</h3>
+                    <br>
+                    <br>
+                    <div class="input-field">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="namaPengguna" type="text" class="validate" name="namaPengguna" required>
+                        <label for="namaPengguna">Nama pengguna</label>
+                    </div>
+                    <br>
+                    
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="kataLaluan" type="password" class="validate" name="kataLaluan" required>
+                        <label for="kataLaluan">Kata Laluan</label>
+                    </div>
+                    <br>
+                    <br>
+                
+                    <button type="submit" class="waves-effect waves-light btn-small">Log Masuk</button>
+                    <br>
+                    <br>
+                    <a href="../pages/register.html">Pengguna Baru?</a>
+                </form>
+                <div class="col s1 push-s2">
+                <img style="width:550px;height:550px" src="../assets/img/logo.gif" />
+                </div>
+            </div>
+        
+    </body>
+    <script type="text/javascript"  src="../js/materialize.js"></script>
+    
+</html>

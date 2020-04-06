@@ -23,10 +23,10 @@ if (isset($_POST['icPelanggan'])){
     $hasil=mysqli_query($samb,$sql1);
     //papar mesej berjaya atau gagal simpan rekod baru
     if($hasil){
-        echo "<script>alert('Pendaftaran Pelanggan Baharu Berjaya');
+        echo "<script>alert('Pendaftaran Pelanggan Baru Berjaya');
         window.location='../pages/tempah.php'</script>";
     }else{
-        echo "<script>alert('Pendaftaran Pelanggan Baharu Gagal');
+        echo "<script>alert('Pendaftaran Pelanggan Baru Gagal');
         window.location='../functions/daftar_pelanggan.php'</script>";
     }
 }

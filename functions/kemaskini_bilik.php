@@ -11,7 +11,7 @@ if(isset($_POST['update'])){
     $result = mysqli_query($samb,
     "UPDATE bilik SET jenisBilik='$jenisBilik',hargaBilik='$hargaBilik' WHERE idBilik=$idBilik");
     echo"<script>
-    alert('Kemaskini rekod telah berjaya');
+    alert('Kemaskini rekod bilik telah berjaya');
     window.location='../pages/bilik.php'</script>";
 }
 ?>
@@ -39,12 +39,12 @@ while($res = mysqli_fetch_array($result)){
                 <fieldset style="padding-left:20%;padding-right:20%">
                     <div class="row">
                     <div class="input-field">
-                        <input id="jenisBilik" type="text" name="jenisBilik" value="<?php echo $jenisBilik;?>">
+                        <input id="jenisBilik" type="text" name="jenisBilik" value="<?php echo $jenisBilik;?>" required>
                         <label for="text">Jenis Bilik</label>
                     </div>
                     <div class="row">
                     <div class="input-field">
-                        <input id="hargaBilik" type="text" name="hargaBilik" value="<?php echo $hargaBilik;?>">
+                        <input id="hargaBilik" type="text" name="hargaBilik" value="<?php echo $hargaBilik;?>" required>
                         <label for="text">Harga Bilik</label>
                     </div>
                     <input type="hidden" name="idBilik" value="<?php echo $_GET['idBilik'];?>" /><br><br>

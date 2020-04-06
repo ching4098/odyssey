@@ -13,9 +13,11 @@ require('../functions/config.php');
     <body>
     <?php include("../components/menu.php"); ?>
         <main>
-        <table width="711" border="0">
+        
+        <table>
             <h3>Laporan Bulanan Keuntungan Bilik</h3>
-        <table class="highlight" width="1000" border="1" align="center">
+        
+        <table class="highlight">
             <tr>
                 <td colspan="9">
                     Rekod Tempahan Bulanan : <?php echo $namarumah; ?>
@@ -99,6 +101,7 @@ require('../functions/config.php');
                 <td>RM <?php echo number_format($jumBesar,2); ?></td>
             </tr>
         </table>
+    
         <br><div align="center" class="style15">*LAPORAN TAMAT*<br><br>
         Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center>

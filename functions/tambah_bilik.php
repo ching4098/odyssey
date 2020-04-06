@@ -22,11 +22,11 @@ if(isset($_POST['jenisBilik'])) {
         <body>
             
             <main>
-            <h3>Tambah Bilik Baharu</h3>
+            <h3>Tambah Bilik Baru</h3>
             <form name="form1" action="../functions/tambah_bilik.php" method="POST">
                 <fieldset style="padding-left:25%;padding-right:25%">
-                    <label>Jenis Bilik:</label><input type="text" name="jenisBilik" id="jenisBilik" /><br><br>
-                    <label>Harga:</label><input type="text" name="hargaBilik" id="hargaBilik" />
+                    <label>Jenis Bilik:</label><input type="text" name="jenisBilik" id="jenisBilik" required/><br><br>
+                    <label>Harga:</label><input type="text" name="hargaBilik" id="hargaBilik" required/>
                     <br><br><button class="waves-effect waves-light btn-small" type="submit" name="update" id="submit" value="Tambah Bilik">Tambah Bilik</button>
                     <br>
                     <br>

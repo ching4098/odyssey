@@ -26,7 +26,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" onclick="zoomOut();"><i class="material-icons">remove</i>Kecilkan Saiz</a></li>
             <br>
             <li><div class="divider"></div></li>
-            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
+            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
@@ -78,7 +78,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" onclick="zoomOut();"><i class="material-icons">remove</i>Kecilkan Saiz</a></li>
             <br>
             <li><div class="divider"></div></li>
-            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log out</a></li>
+            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>

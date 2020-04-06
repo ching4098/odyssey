@@ -15,14 +15,11 @@ require('../functions/config.php');
         
         <main>
         <center>
-            <table>
+        
                 <h3>Laporan Homestay Odyssey</h3>
-                <form  name="form1" method="POST" action="laporan2.php">
-                    <table style="padding-left:20%;padding-right:20%" border="1">
-                        <tr>
-                            <td width="118">Jenis Bilik</td>
-                            <td width="31">:</td>
-                            <td width="429"><label for="select"></label><select class=browser-default name="jenisBilik">
+                <FIELDSET>
+                <form style="padding-left:20%;padding-right:20%" align="middle" name="form1" method="POST" action="laporan2.php">
+                                <label>Jenis Bilik:</label><br><br><select class=browser-default name="jenisBilik">
                                 <?php
                                 //call idBilik from db
                                 $data2=mysqli_query($samb, "SELECT * FROM bilik");
@@ -31,12 +28,10 @@ require('../functions/config.php');
                                     echo "<option value='$info2[idBilik]'>$info2[jenisBilik]</option>";
                                 }
                                 ?>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td>Bulan</td>
-                            <td>:</td>
-                            <td><select class=browser-default name="bulan" id="bulan">
+                            </select><br>
+                                                
+                            <label>Bulan:</label><br><br>
+                            <select class=browser-default name="bulan" id="bulan">
                                 <option value="-">-</option>
                                 <option value="1">Jan</option>
                                 <option value="2">Feb</option>
@@ -50,25 +45,22 @@ require('../functions/config.php');
                                 <option value="10">Okt</option>
                                 <option value="11">Nov</option>
                                 <option value="12">Dec</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td>Tahun</td>
-                            <td>:</td>
-                            <td><select class=browser-default name="tahun" id="tahun">
+                            </select><br>
+                                                
+                            <label>Tahun:</label><br><br>
+                            <select class=browser-default name="tahun" id="tahun">
                                 <option value="-">-</option>
                                 <option>2019</option>
                                 <option>2020</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" style="text-align:center">
-                                <button class="waves-effect waves-light btn-small" type="submit" name="button" id="button" value="Cetak">Cetak</button>
-                            </td>
-                        </tr>
-                    </table>
+                            </select><br><br>
+                            
+                            <button class="waves-effect waves-light btn-small" type="submit" name="button" id="button" value="Cetak">Cetak</button>
+                            
+                        
+                    
                 </form>
-            </table>
+                </FIELDSET>
+            
         </center>
     </main></body>
 </html>

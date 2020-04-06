@@ -42,12 +42,12 @@ while($res = mysqli_fetch_array($result)) {
                 <fieldset style="padding-left:20%;padding-right:20%" >
                     <br><div class="row">
                     <div class="input-field col s12">
-                        <input id="namaPengguna" type="text" name="namaPengguna" placeholder="<?php echo $username;?>">
+                        <input id="namaPengguna" type="text" name="namaPengguna" placeholder="<?php echo $username;?>" required>
                         <label for="text">Nama Pengguna</label>
                     </div><br><br>
                     <br><div class="row">
                     <div class="input-field col s12">
-                        <input id="kataLaluan" type="password" name="kataLaluan" placeholder="<?php echo $pass;?>">
+                        <input id="kataLaluan" type="password" name="kataLaluan" placeholder="<?php echo $pass;?>" required>
                         <label for="password">Kata Laluan</label>
                     </div>
                     </div>
