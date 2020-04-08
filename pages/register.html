@@ -8,7 +8,7 @@
     </head>
     <body>    
                 <div class="row" style="padding-top:7%">
-                <form class="col s5 push-s1" method="POST" action="../functions/registerfunc.php">
+                <form id="regiForm" class="col s5 push-s1" method="POST" action="../functions/registerfunc.php" onsubmit="return validateForm(this)">
                     <br>
                     <br>                    
                     <h3>Sistem Pengurusan Homestay Odyssey</h3>
@@ -16,20 +16,20 @@
                     <br>
                     <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="namaPengguna" type="text" class="validate" name="namaPengguna" required>
+                        <input id="namaPengguna" type="text" class="validate" name="namaPengguna">
                         <label for="namaPengguna">Nama pengguna</label>
                     </div>
                     <br>
                     
                     <div class="input-field">
                         <i class="material-icons prefix">lock</i>
-                        <input id="kataLaluan" type="password" class="validate" name="kataLaluan" required>
+                        <input id="kataLaluan" type="password" class="validate" name="kataLaluan">
                         <label for="kataLaluan">Kata Laluan</label>
                     </div>
                     <br>
                     
                     <label for="jenisPengguna">Jenis Pengguna:</label>
-                        <select id="jenisPengguna" name="jenisPengguna" required>
+                        <select id="jenisPengguna" name="jenisPengguna">
                         <option value="" disabled selected>Pilih Status Pengguna:</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
@@ -46,10 +46,29 @@
                 <img style="width:550px;height:550px" src="../assets/img/logo.gif" />
                 </div>
             </div>
-        
+    
     </body>
     <script type="text/javascript"  src="../js/materialize.js"></script>
     <script>
         M.AutoInit();
+    </script>
+    <script>
+        function validateForm(form) {
+            if(form.kataLaluan.value == "" || form.namaPengguna.value == "" || form.jenisPengguna.value == "") {
+                M.toast({
+                    html: 'Sila masukkan nama pengguna, kata laluan atau jenis pengguna anda',
+                    classes: 'rounded'
+                });
+                return false;
+            }
+            if(form.kataLaluan.value.length >= 26 || form.kataLaluan.value.length <= 5) {
+                M.toast({
+                    html: 'Panjang kata laluan anda adalah dari 6 hingga 25 perkataan',
+                    classes: 'rounded'
+                });
+                return false;
+            }
+            return true;
+        }
     </script>
 </html>

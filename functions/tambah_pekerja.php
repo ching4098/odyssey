@@ -21,12 +21,12 @@ if(isset($_POST['namaPengguna'])) {
         <main>
         <body>
             <h3>Tambah Pekerja</h3>
-            <form name="form1" action="../functions/tambah_pekerja.php" method="POST">
+            <form name="form1" action="../functions/tambah_pekerja.php" method="POST" onsubmit="return validateForm(this)">
                 <fieldset style="padding-left:25%;padding-right:25%">
-                    <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna" required><br><br>
-                    <label>Kata Laluan:</label><input type="password" name="kataLaluan" id="kataLaluan" required><br><br>
+                    <label>Nama Pengguna:</label><input type="text" name="namaPengguna" id="namaPengguna"><br><br>
+                    <label>Kata Laluan:</label><input type="password" name="kataLaluan" id="kataLaluan"><br><br>
                     <label for="jenisPengguna">Jenis Pengguna:</label>
-                        <select id="jenisPengguna" name="jenisPengguna" required>
+                        <select id="jenisPengguna" name="jenisPengguna">
                         <option value="" disabled selected>Pilih Status Pengguna:</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="PEKERJA">PEKERJA</option>
@@ -42,5 +42,24 @@ if(isset($_POST['namaPengguna'])) {
         <script>
             M.AutoInit();
         </script>
+        <script>
+        function validateForm(form) {
+            if(form.kataLaluan.value == "" || form.namaPengguna.value == "" || form.jenisPengguna.value == "") {
+                M.toast({
+                    html: 'Sila masukkan nama pengguna, kata laluan atau jenis pengguna anda',
+                    classes: 'rounded'
+                });
+                return false;
+            }
+            if(form.kataLaluan.value.length >= 26 || form.kataLaluan.value.length <= 5) {
+                M.toast({
+                    html: 'Panjang kata laluan anda adalah dari 6 hingga 25 perkataan',
+                    classes: 'rounded'
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
     </main></center>
 </html>

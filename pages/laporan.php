@@ -23,7 +23,7 @@ require('../functions/config.php');
                                 <?php
                                 //call idBilik from db
                                 $data2=mysqli_query($samb, "SELECT * FROM bilik");
-                                echo "<option>-</option>";
+                                echo "<option>Semua</option>";
                                 while ($info2=mysqli_fetch_array($data2)){
                                     echo "<option value='$info2[idBilik]'>$info2[jenisBilik]</option>";
                                 }
@@ -32,7 +32,7 @@ require('../functions/config.php');
                                                 
                             <label>Bulan:</label><br><br>
                             <select class=browser-default name="bulan" id="bulan">
-                                <option value="-">-</option>
+                                <option value="-">Semua</option>
                                 <option value="1">Jan</option>
                                 <option value="2">Feb</option>
                                 <option value="3">Mac</option>
@@ -49,7 +49,7 @@ require('../functions/config.php');
                                                 
                             <label>Tahun:</label><br><br>
                             <select class=browser-default name="tahun" id="tahun">
-                                <option value="-">-</option>
+                                <option value="-">Semua</option>
                                 <option>2019</option>
                                 <option>2020</option>
                             </select><br><br>

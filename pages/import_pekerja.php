@@ -25,7 +25,7 @@ require('../functions/config.php');
                         <input type="file" name="file" id="file" class="input-large">
                     </div>
                 <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
+                    <input class="file-path validate" type="text"placeholder="Sila Pilih Fail Anda">
                 </div>
             </div>
             <button class="waves-effect waves-light btn-small" type="submit" id="submit" name="Import">Upload</button><br>
