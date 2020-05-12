@@ -17,7 +17,7 @@ require('../functions/config.php');
         <table>
             <h3>Laporan Bulanan Keuntungan Bilik</h3>
         
-        <table class="highlight">
+        <table class="highlight" id="laporan">
             <tr>
                 <td colspan="9">
                     Rekod Tempahan Bulanan : <?php echo $namarumah; ?>
@@ -106,8 +106,24 @@ require('../functions/config.php');
         Jumlah Rekod:<?php echo $bil_rekod; ?></div>
         <center>
             <br>
-            <a class="waves-effect waves-light btn-small" href="javascript:window.print()">Cetak Laporan</a>
+            <a class="waves-effect waves-light btn-small" onclick="sysFunc.printTable()">Cetak Laporan</a>
         </center>
         </table>
     </main></body>
+    <script>
+            var sysFunc = new function() {
+                this.printTable = function() {
+                    var laporan = document.getElementById('laporan');
+                    var style = "<style>";
+                    style = style + "table {width: 100%;}";
+                    style = style + "table, th, td {border: 1px solid black;}";
+                    style = style + "</style>";
+                    var newTab = window.open('', '', 'height=1000,width=1200');
+                    newTab.document.write(style);
+                    newTab.document.write(laporan.outerHTML);
+                    newTab.document.close();
+                    newTab.print();
+                }
+            }
+        </script>
 </html>

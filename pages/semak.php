@@ -15,7 +15,7 @@ require ("../functions/keselamatan.php");
     <h3>Rekod Tempahan <?php echo $namarumah ?></h3><br>
     <center>
         
-    <table class="highlight" width="1000" border="1" align="center">
+    <table id="laporan" class="highlight" width="1000" border="1" align="center">
 <tr>
     <td width="2.5%"><b>Bil.</b></td>
     <td width="7%"><b>Jenis Bilik</b></td>
@@ -106,7 +106,18 @@ while ($info1=mysqli_fetch_array($data1))
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam
                 tempoh 3 hari SEBELUM tarikh masuk.</font>
                 <br><br>
-                <a class="waves-effect waves-light btn-small" href="javascript:window.print()">Cetak Laporan</a>
+                <a class="waves-effect waves-light btn-small" onclick="sysFunc.printTable()" >Cetak Laporan</a>
         </center>
         </main></body>
+        <script>
+            var sysFunc = new function() {
+                this.printTable = function() {
+                    var laporan = document.getElementById('laporan');
+                    var newTab = window.open('', '', 'height=1000,width=1200');
+                    newTab.document.write(laporan.outerHTML);
+                    newTab.document.close();
+                    newTab.print();
+                }
+            }
+        </script>
         </html>
