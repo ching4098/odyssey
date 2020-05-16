@@ -12,21 +12,23 @@ require('../functions/config.php');
     <body>
         <?php include("../components/menu.php"); ?>
     </body>
-    <center>
-        <main>
+    
+        <main><center>
         <h3>Senarai Pekerja</h3><br>
         <fieldset>
             <table class="highlight">
                 <tr>
-                    <td colspan="5" valign="middle" align="center">
+                    <td colspan="7" valign="middle" align="center">
                         <a class="waves-effect waves-light btn-small" href="../functions/tambah_pekerja.php">[+] Tambah Pekerja
                         </a></td>
                 </tr>
                 <tr>
                     <td width="5%"><b>Bil.</b></td>
-                    <td width="20%"><b>Nama Pengguna</b></td>
+                    <td width="10%"><b>Nama Pengguna</b></td>
                     <td width="10%"><b>Kata Laluan</b></td>
                     <td width="10%"><b>Status Pengguna</b></td>
+                    <td width="10%"><b>Login Terakhir</b></td>
+                    <td width="10%"><b>Logout Terakhir</b></td>
                     <td width="10%"><b>Tindakan</b></td>
                 </tr>
                 <?php
@@ -39,6 +41,8 @@ require('../functions/config.php');
                         <td><?php echo $info1['namaPengguna']; ?></td>
                         <td><?php echo $info1['kataLaluan']; ?></td>
                         <td><?php echo $info1['jenisPengguna']; ?></td>
+                        <td><?php echo $info1['loginTerakhir']; ?></td>
+                        <td><?php echo $info1['logoutTerakhir']; ?></td>
                         <td>
                             <a class="waves-effect waves-light btn-small" href="../functions/kemaskini_pekerja.php?idPengguna=<?php echo $info1['idPengguna']; ?>">Kemaskini</a> |
                             <?php
@@ -49,11 +53,11 @@ require('../functions/config.php');
                             <?php
                             }
                             ?>
-                        </td>
-                    </tr>
-                <?php $no++; } ?>
-            </table>
-        </fieldset>
-        </main>
-    </center>
+</td>
+</tr>
+<?php $no++; } ?>
+</table>
+</fieldset>
+</center>    
+</main>    
 </html>

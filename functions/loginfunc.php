@@ -23,8 +23,12 @@ if (isset($_POST['namaPengguna'])){
     else{
         $_SESSION['idPengguna']=$row['idPengguna'];
         $_SESSION['level']=$row['jenisPengguna'];
+
+        $sql = mysqli_query($samb,"UPDATE pengguna SET loginTerakhir=NOW() WHERE idPengguna={$_SESSION['idPengguna']}"); 
+        $result = mysqli_query($samb, $sql);
         
         //open designated index.php
+        
         echo "<script>alert('Anda telah berjaya log masuk');
         window.location='../pages/index.php'</script>";
     }

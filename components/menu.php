@@ -1,7 +1,9 @@
 <?php
-if ($_SESSION['level']=="ADMIN")
-{
-    
+include("../functions/config.php");
+
+if ($_SESSION['level']=="ADMIN") {
+//$data = mysqli_query($samb,"SELECT * FROM pengguna");
+//while ($info1=mysqli_fetch_array($data)){
 ?>
 <head>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,7 +28,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" onclick="zoomOut();"><i class="material-icons">remove</i>Kecilkan Saiz</a></li>
             <br>
             <li><div class="divider"></div></li>
-            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
+            <br><li><a class="waves-effect" href="../functions/keluar.php?idPengguna=<?php echo $_SESSION['idPengguna'] ?>"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
@@ -56,7 +58,10 @@ if ($_SESSION['level']=="ADMIN")
 
     
 <?php
+
 } else {
+    //$data2 = mysqli_query($samb,"SELECT * FROM pengguna");
+    //while ($info2=mysqli_fetch_array($data2)) {
 ?>
 <head>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -78,7 +83,7 @@ if ($_SESSION['level']=="ADMIN")
             <li><a class="waves-effect" onclick="zoomOut();"><i class="material-icons">remove</i>Kecilkan Saiz</a></li>
             <br>
             <li><div class="divider"></div></li>
-            <br><li><a class="waves-effect" href="../functions/keluar.php"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
+            <br><li><a class="waves-effect" href="../functions/keluar.php?idPengguna=<?php echo $_SESSION['idPengguna'] ?>"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
         </ul>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>

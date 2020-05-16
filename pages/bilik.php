@@ -37,8 +37,7 @@ while ($info1=mysqli_fetch_array($data1))
         <td><?php echo $no; ?></td>
         <td><?php echo $info1['jenisBilik']; ?></td>
         <td>RM <?php echo $info1['hargaBilik']; ?></td>
-        <td><a class="waves-effect waves-light btn-small" href="../functions/kemaskini_bilik.php?idBilik=<?php echo $info1['idBilik'];?>">Kemaskini</a> 
-        |
+        <td><a class="waves-effect waves-light btn-small" href="../functions/kemaskini_bilik.php?idBilik=<?php echo $info1['idBilik'];?>">Kemaskini</a> |
         <a class="waves-effect waves-light btn-small" href="../functions/hapus_bilik.php?idBilik=<?php echo $info1['idBilik'];?>">Hapus</a>
         
 </td>

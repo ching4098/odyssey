@@ -9,7 +9,7 @@ if(isset($_POST['update'])){
     $hargaBilik = $_POST['hargaBilik'];
     //kemaskini dengan  rekod baru
     $result = mysqli_query($samb,
-    "UPDATE bilik SET jenisBilik='$jenisBilik',hargaBilik='$hargaBilik' WHERE idBilik=$idBilik");
+    "UPDATE bilik SET jenisBilik='$jenisBilik',hargaBilik='$hargaBilik' WHERE idBilik='$idBilik'");
     echo"<script>
     alert('Kemaskini rekod bilik telah berjaya');
     window.location='../pages/bilik.php'</script>";
