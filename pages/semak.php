@@ -101,8 +101,8 @@ while ($info1=mysqli_fetch_array($data1))
         <td></td>
         </tr>
         </table>
-        </fieldset><div align="center" class="style15">* Laporan Tamat *<br><br>Jumlah
-        Rekod:<?php echo $no-1; ?></div><br>
+        </fieldset><div align="center" class="style15"><br>* Laporan Tamat *<br><br>Jumlah
+        Rekod: <?php echo $no-1; ?></div><br>
         <center>
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam
                 tempoh 3 hari SEBELUM tarikh masuk.</font>
