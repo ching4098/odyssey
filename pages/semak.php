@@ -11,8 +11,9 @@ require ("../functions/keselamatan.php");
     <body>
         
     <?php include("../components/menu.php"); ?>    
-    <main>
+    <main style="padding-left:5%;padding-right:5%">
     <h3>Rekod Tempahan <?php echo $namarumah ?></h3><br>
+    <fieldset>
     <center>
         
     <table id="laporan" class="highlight" width="1000" border="1" align="center">
@@ -100,7 +101,7 @@ while ($info1=mysqli_fetch_array($data1))
         <td></td>
         </tr>
         </table>
-        <hr /><div align="center" class="style15">* Laporan Tamat *<br><br>Jumlah
+        </fieldset><div align="center" class="style15">* Laporan Tamat *<br><br>Jumlah
         Rekod:<?php echo $no-1; ?></div><br>
         <center>
             <font color="red">Nota - Pembatalan tempahan hanya dibenarkan dalam

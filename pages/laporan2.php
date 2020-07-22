@@ -12,12 +12,14 @@ require('../functions/config.php');
     </head>
     <body>
     <?php include("../components/menu.php"); ?>
-        <main>
+    <main style="padding-left:5%;padding-right:5%">
         
         <table>
             <h3>Laporan Bulanan Keuntungan Bilik</h3>
+            
         
         <table class="highlight" id="laporan">
+            
             <tr>
                 <td colspan="9">
                     Rekod Tempahan Bulanan : <?php echo $namarumah; ?>

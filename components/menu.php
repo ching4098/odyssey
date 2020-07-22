@@ -9,7 +9,7 @@ if ($_SESSION['level']=="ADMIN") {
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../css/global.css" rel="stylesheet" type="text/css" >
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
 
 </head>
 <body>
@@ -30,6 +30,7 @@ if ($_SESSION['level']=="ADMIN") {
             <li><div class="divider"></div></li>
             <br><li><a class="waves-effect" href="../functions/keluar.php?idPengguna=<?php echo $_SESSION['idPengguna'] ?>"><i class="material-icons">exit_to_app</i>Log Keluar</a></li>
         </ul>
+        
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
     <script>
@@ -67,7 +68,7 @@ if ($_SESSION['level']=="ADMIN") {
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../css/global.css" rel="stylesheet" type="text/css" >
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
 
 </head>
 <body>

@@ -21,7 +21,7 @@ if(isset($_POST['jenisBilik'])) {
         
         <body>
             
-            <main>
+        <main style="padding-left:5%;padding-right:5%">
             <h3>Tambah Bilik Baru</h3>
             <form name="form1" action="../functions/tambah_bilik.php" method="POST">
                 <fieldset style="padding-left:25%;padding-right:25%">

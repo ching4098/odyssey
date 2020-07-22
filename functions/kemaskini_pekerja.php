@@ -35,7 +35,7 @@ while($res = mysqli_fetch_array($result)) {
 </head>
     <center>
         
-        <main>
+    <main style="padding-left:5%;padding-right:5%">
         <body>
             <h3>Kemaskini Rekod Pekerja</h3>
             <form name="form1" action="../functions/kemaskini_pekerja.php" method="POST">

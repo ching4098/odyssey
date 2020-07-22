@@ -17,10 +17,11 @@ require('../functions/config.php');
 </head>
 <body>
 <?php include ("../components/menu.php"); ?>
-<main>
+<main style="padding-left:5%;padding-right:5%">
 <div>
 	<h3>Laporan Keuntungan Homestay Odyssey</h3>
   <br>
+  <FIELDSET>
 	<div class="row">
 		<div class="col s3">
     <br><br><br><br><br><br><br>

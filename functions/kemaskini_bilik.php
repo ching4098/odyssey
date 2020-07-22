@@ -33,7 +33,7 @@ while($res = mysqli_fetch_array($result)){
     <center>
         
         <body>
-            <main>
+        <main style="padding-left:5%;padding-right:5%">
             <h3>Kemaskini Bilik</h3>
             <form name="form1" action="../functions/kemaskini_bilik.php" method="POST">
                 <fieldset style="padding-left:20%;padding-right:20%">

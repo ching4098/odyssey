@@ -13,7 +13,7 @@ require('../functions/config.php');
     <?php include("../components/menu.php"); ?>
     <body>
         
-        <main>
+        <main style="padding-left:5%;padding-right:5%">
         <center>
         
                 <h3>Laporan Homestay Odyssey</h3>

@@ -18,7 +18,7 @@ if(isset($_POST['namaPengguna'])) {
     </head>
     <?php include("../components/menu.php"); ?>
     <center>
-        <main>
+    <main style="padding-left:5%;padding-right:5%">
         <body>
             <h3>Tambah Pekerja</h3>
             <form name="form1" action="../functions/tambah_pekerja.php" method="POST" onsubmit="return validateForm(this)">

@@ -39,7 +39,7 @@ if (isset($_POST['icPelanggan'])){
 </head>
 <body>
     <?php include("../components/menu.php"); ?>
-    <main>
+    <main style="padding-left:5%;padding-right:5%">
     <h3>Pendaftaran Pelanggan Baru</h3><br>
 <fieldset>
             <!-- Papar Borang Pendaftaran -->

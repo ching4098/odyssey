@@ -12,7 +12,7 @@ require('../functions/config.php');
     <?php include("../components/menu.php"); ?>
     <body>
         
-    <main>
+    <main style="padding-left:5%;padding-right:5%">
         <center>
         <h3>Senarai Bilik</h3><br>
         <fieldset >

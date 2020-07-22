@@ -12,7 +12,7 @@ require('../functions/config.php');
     <body>
         <?php include("../components/menu.php"); ?>
     </body>
-    <main>
+    <main style="padding-left:5%;padding-right:5%">
     <center>
         <h3>Import Akaun Pekerja</h3>
         <body>
