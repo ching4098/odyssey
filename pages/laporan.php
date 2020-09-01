@@ -54,7 +54,7 @@ require('../functions/config.php');
                                 <option>2020</option>
                             </select><br><br>
                             
-                            <button class="waves-effect waves-light btn-small" type="submit" name="button" id="button" value="Cetak">Cetak</button>
+                            <button class="waves-effect waves-light btn-small" type="submit" name="button" id="button" value="Cetak">Papar</button>
                             
                         
                     

@@ -29,8 +29,7 @@ if (isset($_POST['namaPengguna'])){
         
         //open designated index.php
         
-        echo "<script>alert('Anda telah berjaya log masuk');
-        window.location='../pages/index.php'</script>";
+        echo "<script>alert('Anda telah berjaya log masuk'); window.location='../pages/index.php'</script>";
     }
 }
 ?>

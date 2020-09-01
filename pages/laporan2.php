@@ -44,19 +44,43 @@ require('../functions/config.php');
                 $tahun=$_POST["tahun"];
 
                 if ($idBilik=="-"&&$bulan=="-"&&$tahun=="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan ORDER by idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan
+                     ORDER by idBilik, tarikhMasuk");
+
                 }elseif ($idBilik!="-"&&$bulan=="-"&&$tahun=="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan ORDER by idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan
+                     ORDER by idBilik, tarikhMasuk");
+
                 }elseif ($idBilik!="-"&&$bulan!="-"&&$tahun=="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan WHERE idBilik='$idBilik' AND (MONTH(tarikhMasuk)='$bulan' OR MONTH(tarikhKeluar)='$bulan') ORDER BY idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan
+                     WHERE idBilik='$idBilik'
+                     AND (MONTH(tarikhMasuk)='$bulan' OR MONTH(tarikhKeluar)='$bulan') 
+                     ORDER BY idBilik, tarikhMasuk");
+
                 }elseif($idBilik!="-"&&$bulan!="-"&&$tahun!="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan WHERE idBilik='$idBilik' AND ((MONTH(tarikhMasuk)='$bulan' AND YEAR(tarikhMasuk)='$tahun') OR (MONTH(tarikhKeluar)='$bulan' AND YEAR(tarikhKeluar)='$tahun')) ORDER BY idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan 
+                    WHERE idBilik='$idBilik' 
+                    AND ((MONTH(tarikhMasuk)='$bulan' 
+                    AND YEAR(tarikhMasuk)='$tahun') 
+                    OR (MONTH(tarikhKeluar)='$bulan' 
+                    AND YEAR(tarikhKeluar)='$tahun')) 
+                    ORDER BY idBilik, tarikhMasuk");
+
                 }elseif($idBilik=="-"&&$bulan!="-"&&$tahun=="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan WHERE MONTH(tarikhMasuk)='$bulan' OR MONTH(tarikhKeluar)='$bulan' ORDER BY idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan 
+                    WHERE MONTH(tarikhMasuk)='$bulan' OR MONTH(tarikhKeluar)='$bulan' 
+                    ORDER BY idBilik, tarikhMasuk");
+
                 }elseif($idBilik=="-"&&$bulan=="-"&&$tahun!="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan WHERE YEAR(tarikhMasuk)='$tahun' OR YEAR(tarikhKeluar)='$tahun' ORDER BY idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan 
+                    WHERE YEAR(tarikhMasuk)='$tahun' OR YEAR(tarikhKeluar)='$tahun' 
+                    ORDER BY idBilik, tarikhMasuk");
+                    
                 }elseif($idBilik!="-"&&$bulan=="-"&&$tahun!="-") {
-                    $data1=mysqli_query($samb, "SELECT * FROM tempahan WHERE idBilik='$idBilik AND (YEAR(tarikhMasuk)='$tahun' OR YEAR(tarikhKeluar)='$tahun') ORDER BY idBilik, tarikhMasuk");
+                    $data1=mysqli_query($samb, "SELECT * FROM tempahan 
+                    WHERE idBilik='$idBilik AND 
+                    (YEAR(tarikhMasuk)='$tahun' OR YEAR(tarikhKeluar)='$tahun') 
+                    ORDER BY idBilik, tarikhMasuk");
                 }
                 
                 $jumBesar=0;

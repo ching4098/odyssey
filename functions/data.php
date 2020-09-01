@@ -6,7 +6,7 @@
 	$year = date('Y');
 	$total=array();
 	for ($month = 1; $month <= 12; $month ++){
-		$sql="SELECT *, SUM(amaun) AS total FROM keuntungan WHERE month(tarikh)='$month' AND year(tarikh)='$year'";
+		$sql="SELECT *, SUM(bayaran) AS total FROM tempahan WHERE month(tarikhKeluar)='$month' AND year(tarikhKeluar)='$year'";
 		$query=$samb->query($sql);
 		$row=$query->fetch_array();
 
@@ -30,7 +30,7 @@
 	$pnum=array();
 
 	for ($pmonth = 1; $pmonth <= 12; $pmonth ++){
-		$sql="SELECT *, SUM(amaun) AS ptotal FROM keuntungan WHERE month(tarikh)='$pmonth' AND year(tarikh)='$pyear'";
+		$sql="SELECT *, SUM(bayaran) AS ptotal FROM tempahan WHERE month(tarikhKeluar)='$pmonth' AND year(tarikhKeluar)='$pyear'";
 		$pquery=$samb->query($sql);
 		$prow=$pquery->fetch_array();
 

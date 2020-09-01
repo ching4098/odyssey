@@ -22,23 +22,6 @@ require('../functions/config.php');
 	<h3>Laporan Keuntungan Homestay Odyssey</h3>
   <br>
   <FIELDSET>
-	<div class="row">
-		<div class="col s3">
-    <br><br><br><br><br><br><br>
-			<h5>Input Keuntungan</h5>
-      <br>
-			<form method="POST" action="../functions/addsales.php">
-				<div>
-					<label>Amaun:</label>
-					<input type="text" name="amaun" required>
-				</div>
-				<div>
-					<label>Tarikh:</label>
-					<input type="date" name="tarikh" required>
-				</div>
-				<br><button type="submit" class="waves-effect waves-light btn-small">Muat Naik</button>
-			</form>
-		</div>
 		<div class="col s9">
 			<div class="box box-success">
             <div class="box-header with-border">
