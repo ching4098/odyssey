@@ -19,6 +19,13 @@ require('../functions/config.php');
             
         
         <table class="highlight" id="laporan">
+        <style>
+            @media screen and (min-width:800px) and (max-width: 1366px) {
+            table {
+                font-size: 10px;
+            }
+        }
+        </style>
             
             <tr>
                 <td colspan="9">

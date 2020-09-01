@@ -17,6 +17,14 @@ require ("../functions/keselamatan.php");
     <center>
         
     <table id="laporan" class="highlight" width="1000" border="1" align="center">
+        <style>
+            @media screen and (min-width:800px) and (max-width: 1366px) {
+            table {
+                font-size: 10px;
+            }
+        }
+        </style>
+
 <tr>
     <td width="2.5%"><b>Bil.</b></td>
     <td width="7%"><b>Jenis Bilik</b></td>

@@ -17,6 +17,13 @@ require('../functions/config.php');
         <h3>Senarai Pekerja</h3><br>
         <fieldset>
             <table class="highlight">
+            <style>
+            @media screen and (min-width:800px) and (max-width: 1366px) {
+            table {
+                font-size: 10px;
+            }
+        }
+        </style>
                 <tr>
                     <td colspan="7" valign="middle" align="center">
                         <a class="waves-effect waves-light btn-small" href="../functions/tambah_pekerja.php">[+] Tambah Pekerja
