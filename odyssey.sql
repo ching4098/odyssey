@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2020 at 09:05 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Sep 01, 2020 at 12:54 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -70,18 +70,6 @@ INSERT INTO `bilik` (`idBilik`, `jenisBilik`, `hargaBilik`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `keuntungan`
---
-
-CREATE TABLE `keuntungan` (
-  `idKeuntungan` int(11) NOT NULL,
-  `amaun` double NOT NULL,
-  `tarikh` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `pelanggan`
 --
 
@@ -120,7 +108,7 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`idPengguna`, `namaPengguna`, `kataLaluan`, `jenisPengguna`, `loginTerakhir`, `logoutTerakhir`) VALUES
-(2, 'admin', '123456', 'ADMIN', '2020-05-16 15:01:08', '2020-05-16 14:59:57'),
+(2, 'admin', '123456', 'ADMIN', '2020-09-01 18:44:25', '2020-09-01 18:37:19'),
 (4, 'ermm', '123456', 'ADMIN', '2020-05-16 15:00:37', '2020-05-16 15:00:40'),
 (6, 'regre', '123456', 'PEKERJA', '2020-05-16 15:00:56', '2020-05-16 15:00:59'),
 (10, 'zx', '123456', 'PEKERJA', '2020-05-16 15:00:15', '2020-05-16 15:00:25');
@@ -170,12 +158,6 @@ ALTER TABLE `bilik`
   ADD PRIMARY KEY (`idBilik`);
 
 --
--- Indexes for table `keuntungan`
---
-ALTER TABLE `keuntungan`
-  ADD PRIMARY KEY (`idKeuntungan`);
-
---
 -- Indexes for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
@@ -211,12 +193,6 @@ ALTER TABLE `alamat`
 --
 ALTER TABLE `bilik`
   MODIFY `idBilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `keuntungan`
---
-ALTER TABLE `keuntungan`
-  MODIFY `idKeuntungan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
