@@ -17,7 +17,7 @@ $data1=mysqli_query($samb,"SELECT * FROM pengguna");
     
     <?php include("../components/menu.php"); ?>    
     <main style="padding-left:5%;padding-right:5%">
-    <h3>Tempahan Bilik</h3>
+    <h3>Tempahan Bilik</h3><br>
     <FIELDSET>
         <br><a class="waves-effect waves-light btn-small" href="../functions/daftar_pelanggan.php">[+] Pelanggan Baru</a>
         <br>

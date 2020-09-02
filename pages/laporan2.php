@@ -15,7 +15,7 @@ require('../functions/config.php');
     <main style="padding-left:5%;padding-right:5%">
         
         <table>
-            <h3>Laporan Bulanan Keuntungan Bilik</h3>
+            <h3>Laporan Bulanan Keuntungan Bilik</h3><br>
             
         
         <table class="highlight" id="laporan">

@@ -16,7 +16,7 @@ require('../functions/config.php');
         <main style="padding-left:5%;padding-right:5%">
         <center>
         
-                <h3>Laporan Homestay Odyssey</h3>
+                <h3>Laporan Homestay Odyssey</h3><br>
                 <FIELDSET>
                 <form style="padding-left:20%;padding-right:20%" align="middle" name="form1" method="POST" action="laporan2.php">
                                 <label>Jenis Bilik:</label><br><br><select class=browser-default name="jenisBilik">
