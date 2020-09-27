@@ -46,7 +46,7 @@ if (isset($_POST['icPelanggan'])){
             <form method="POST" style="padding-left:20%;padding-right:20%">
             <br><div class="input-field">
                 <i class="material-icons prefix">perm_identity</i>
-                <input id="icPelanggan" type="text" name="icPelanggan" placeholder="090807030555" maxlength="12" size="15" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required autofocus>
+                <input id="icPelanggan" type="text" name="icPelanggan" placeholder="090807030555" onkeypress="return isNumberKey(event)" required autofocus>
                 <label for="icon_prefix">Nombor Kad Pengenalan <font size="3" color="ff0000">*Tanpa tanda "-"</font></label>
             </div>
 
@@ -99,4 +99,17 @@ if (isset($_POST['icPelanggan'])){
         </fieldset>
         </main>
 </body>
+<script>
+        function isNumberKey(checkEvent) {
+            var charCode = event.which || event.keyCode;
+            var valic = event.target.value.length;
+            if (charCode <= 47 || charCode >= 58 || valic >= 12){
+                M.toast({
+                    html: 'Sila masukkan 12 digit nombor sahaja',
+                    classes: 'rounded'
+                });
+                return false;
+            }return true;
+        }
+    </script> 
 </html>
