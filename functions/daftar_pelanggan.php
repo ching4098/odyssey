@@ -43,10 +43,10 @@ if (isset($_POST['icPelanggan'])){
     <h3>Pendaftaran Pelanggan Baru</h3><br>
 <fieldset>
             <!-- Papar Borang Pendaftaran -->
-            <form method="POST" style="padding-left:20%;padding-right:20%">
+            <form method="POST" style="padding-left:20%;padding-right:20%" onsubmit="return validateForm(this)">
             <br><div class="input-field">
                 <i class="material-icons prefix">perm_identity</i>
-                <input id="icPelanggan" type="text" name="icPelanggan" placeholder="090807030555" onkeypress="return isNumberKey(event)" required autofocus>
+                <input id="icPelanggan" type="text" name="icPelanggan" placeholder="090807030555" required autofocus>
                 <label for="icon_prefix">Nombor Kad Pengenalan <font size="3" color="ff0000">*Tanpa tanda "-"</font></label>
             </div>
 
@@ -100,16 +100,15 @@ if (isset($_POST['icPelanggan'])){
         </main>
 </body>
 <script>
-        function isNumberKey(checkEvent) {
-            var charCode = event.which || event.keyCode;
-            var valic = event.target.value.length;
-            if (charCode <= 47 || charCode >= 58 || valic >= 12){
+        var acceptedVal = /^[0-9]+$/;
+        function validateForm(form) {
+            if(form.icPelanggan.value.length != 12 || !form.icPelanggan.value.match(acceptedVal) ) {
                 M.toast({
-                    html: 'Sila masukkan 12 digit nombor sahaja',
+                    html: 'Sila masukkan 12 digit nombor IC Pelanggan sahaja',
                     classes: 'rounded'
                 });
                 return false;
             }return true;
         }
-    </script> 
+</script>    
 </html>
